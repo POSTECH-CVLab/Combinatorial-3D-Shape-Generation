@@ -72,4 +72,3 @@ for rule in RULE_CONTACTS_2_4:
         LIST_RULES_2_4.append(cur_rule)
 
         ind += 1
-

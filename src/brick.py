@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Brick(object):
+    # TODO: position is on integer grid, it makes vertex coordinates to real numbers.
     def __init__(self, size_upper=[2, 4], size_lower=[2, 4], height=1):
         self.size_upper = np.array(size_upper)
         self.size_lower = np.array(size_lower)
@@ -24,6 +25,7 @@ class Brick(object):
         for elem in signs:
             size_lower = self.size_lower
             if self.get_direction() == 1:
+                # TODO: make it smarter
                 size_lower = np.array([size_lower[1], size_lower[0]])
 
             trans = elem * size_lower / 2
