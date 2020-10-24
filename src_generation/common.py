@@ -7,7 +7,7 @@ import brick
 import bricks
 import bo
 import visualization as vis
-import utils
+import utils_primitive
 
 
 def get_initial_bricks(num_bricks):
@@ -155,7 +155,7 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
         list_bricks.append(bricks_)
 
         if is_save:
-            utils.save_bricks(bricks_, str_path=str_path)
+            utils_primitive.save_bricks(bricks_, str_path=str_path)
 
     return list_bricks
 
