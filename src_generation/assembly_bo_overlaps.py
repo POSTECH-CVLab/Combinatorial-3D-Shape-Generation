@@ -6,7 +6,7 @@ import os
 import bo
 import bricks
 import common
-import normalize_bricks
+import utils_generation
 
 
 str_exp = 'assembly_bo_overlap'
@@ -27,7 +27,7 @@ print(str_target)
 target = np.load(os.path.join(str_path_dataset, str_target), allow_pickle=True)
 target = target[()]
 print(target.get_length())
-target = normalize_bricks.align_to_origin(target)
+target = utils_generation.align_to_origin(target)
 
 num_bricks = int(target.get_length() * 0.9)
 

@@ -4,7 +4,7 @@ import time
 
 import brick
 import rules
-import utils
+import utils_primitive
 
 
 def convert_to_bricks(X, A):
@@ -59,9 +59,9 @@ def get_connection_type(brick_1, brick_2):
 
 def _fun_validate_overlap(min_max_1, brick_2):
     vert_2 = brick_2.get_vertices()
-    min_max_2 = utils.get_min_max_3d(vert_2)
+    min_max_2 = utils_primitive.get_min_max_3d(vert_2)
 
-    res = utils.check_overlap_3d(min_max_1, min_max_2)
+    res = utils_primitive.check_overlap_3d(min_max_1, min_max_2)
 
     return res
 
@@ -70,16 +70,16 @@ def _fun_validate_contact(pos_1, vert_1, min_max_1, brick_2):
     vert_2 = brick_2.get_vertices()
 
     if np.abs(pos_1[2] - pos_2[2]) == 1:
-        min_max_2 = utils.get_min_max_3d(vert_2)
+        min_max_2 = utils_primitive.get_min_max_3d(vert_2)
 
-        res = utils.check_overlap_2d(min_max_1[:2], min_max_2[:2])
+        res = utils_primitive.check_overlap_2d(min_max_1[:2], min_max_2[:2])
         if res: 
             return 1
     return 0
 
 def fun_validate_overlap_outer(brick_1, list_bricks):
     vert_1 = brick_1.get_vertices()
-    min_max_1 = utils.get_min_max_3d(vert_1)
+    min_max_1 = utils_primitive.get_min_max_3d(vert_1)
 
     results = [_fun_validate_overlap(min_max_1, elem) for elem in list_bricks]
 
@@ -92,7 +92,7 @@ def fun_validate_contact_outer(brick_1, list_bricks):
 
     pos_1 = brick_1.get_position()
     vert_1 = brick_1.get_vertices()
-    min_max_1 = utils.get_min_max_3d(vert_1)
+    min_max_1 = utils_primitive.get_min_max_3d(vert_1)
 
     results = [_fun_validate_contact(pos_1, vert_1, min_max_1, elem) for elem in list_bricks]
 
@@ -112,6 +112,7 @@ class Bricks(object):
         self.max_bricks = max_bricks
         self.bricks = []
         self.adjacency_matrix = np.array([])
+        self.degree_matrix = np.array([])
         self.connection_types = []
 
     def _validate_overlap(self):
@@ -124,7 +125,10 @@ class Bricks(object):
         len_bricks = self.get_length()
         reached = np.zeros(len_bricks)
 
-        A, D = self.compute_adjacency_degree_matrices()
+        self.compute_adjacency_degree_matrices()
+        A = self.get_adjacency_matrix()
+        D = self.get_degree_matrix()
+
         for ind_1 in range(0, len_bricks):
             for ind_2 in range(0, len_bricks):
                 if ind_1 > ind_2:
@@ -208,6 +212,9 @@ class Bricks(object):
     def get_adjacency_matrix(self):
         return self.adjacency_matrix
 
+    def get_degree_matrix(self):
+        return self.degree_matrix
+
     def get_vertices(self):
         bricks_ = self.get_bricks()
 
@@ -239,7 +246,7 @@ class Bricks(object):
             try:
                 cur_bricks.add(brick_)
                 bricks_validated.append(brick_)
-            except:
+            except Exception as e:
                 pass
 
         return bricks_validated
@@ -266,7 +273,7 @@ class Bricks(object):
 
                     # lower
                     new_brick = copy.deepcopy(brick_)
-                    new_brick.set_position(cur_position + np.concatenate((np.array(trans), [-1.0 * new_brick.height])))
+                    new_brick.set_position(cur_position + np.concatenate((np.array(trans), [-1 * new_brick.height])))
                     new_brick.set_direction((cur_direction + direction) % 2)
                     if new_brick.get_position()[2] >= 0:
                         new_bricks.append(new_brick)
@@ -276,16 +283,19 @@ class Bricks(object):
         return new_bricks
 
     def sample_one(self):
-        bricks = self.get_bricks()
-        brick_sampled = np.random.choice(bricks)
+        list_bricks = self.get_bricks()
+        ind_brick = np.random.choice(self.get_length())
+        brick_sampled = list_bricks[ind_brick]
 
         cur_position = brick_sampled.get_position()
         cur_direction = brick_sampled.get_direction()
 
-        cur_rule = np.random.choice(rules.RULE_CONTACTS_2_4, p=rules.PROBS_CONTACTS_2_4)
+        ind_rule = np.random.choice(len(rules.RULE_CONTACTS_2_4), p=rules.PROBS_CONTACTS_2_4)
+        cur_rule = rules.RULE_CONTACTS_2_4[ind_rule]
         
         translations = cur_rule['translations']
         direction = cur_rule['direction']
+
         ind_trans = np.random.choice(len(translations))
         trans = translations[ind_trans]
 
@@ -302,7 +312,7 @@ class Bricks(object):
 
             # lower
             new_brick = copy.deepcopy(brick_sampled)
-            new_brick.set_position(cur_position + np.concatenate((np.array(trans), [-1.0 * new_brick.height])))
+            new_brick.set_position(cur_position + np.concatenate((np.array(trans), [-1 * new_brick.height])))
             new_brick.set_direction((cur_direction + direction) % 2)
             if new_brick.get_position()[2] >= 0:
                 new_bricks.append(new_brick)
@@ -345,10 +355,10 @@ class Bricks(object):
                 pos_2 = brick_2.get_position()
                 vert_1 = brick_1.get_vertices()
                 vert_2 = brick_2.get_vertices()
-                min_max_1 = utils.get_min_max_3d(vert_1)
-                min_max_2 = utils.get_min_max_3d(vert_2)
+                min_max_1 = utils_primitive.get_min_max_3d(vert_1)
+                min_max_2 = utils_primitive.get_min_max_3d(vert_2)
 
-                if np.abs(pos_1[2] - pos_2[2]) == 1 and utils.check_overlap_2d(min_max_1[:2], min_max_2[:2]) == 1:
+                if np.abs(pos_1[2] - pos_2[2]) == 1 and utils_primitive.check_overlap_2d(min_max_1[:2], min_max_2[:2]) == 1:
                     A[ind_1, ind_2] = 1
                     conn = get_connection_type(bricks_[ind_1], bricks_[ind_2])
                     connection_type.append(conn)
@@ -357,15 +367,19 @@ class Bricks(object):
             connection_types.append(connection_type)
 
         self.adjacency_matrix = A
+        self.degree_matrix = D
         self.connection_types = connection_types
         if not len(self.get_connection_types()) == self.get_length():
             raise ValueError('Lengths are different.')
 
-        return A, D
+        return
 
     def get_graph(self):
+        self.compute_adjacency_degree_matrices()
+
         X = self.get_positions()
-        A, D = self.compute_adjacency_degree_matrices()
+        A = self.get_adjacency_matrix()
+        D = self.get_degree_matrix()
 
         return X, A, D
 

@@ -76,6 +76,12 @@ class Brick(object):
         self.set_position(pos)
         self.set_direction(direc)
 
+    def get_position_direction(self):
+        return np.concatenate((
+            self.get_position(),
+            np.array([self.get_direction()])
+        ))
+
 
 if __name__ == '__main__':
     obj_brick = Brick()
