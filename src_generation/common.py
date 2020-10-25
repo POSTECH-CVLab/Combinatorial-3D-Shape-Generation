@@ -3,11 +3,12 @@ import time
 import os
 import copy
 
-import brick
-import bricks
+from geometric_primitives import brick
+from geometric_primitives import bricks
+from geometric_primitives import visualization as vis
+from geometric_primitives import utils as utils_gp
+
 import bo
-import visualization as vis
-import utils_primitive
 
 
 def get_initial_bricks(num_bricks):
@@ -37,7 +38,7 @@ def random_all(bricks_initial, num_bricks, num_rounds):
             bricks_.add(next_brick)
 
             time_end = time.time()
-            print('Time consumed:', time_end - time_start, 'sec.')
+            print('Time consumed: {:.4f} sec.'.format(time_end - time_start))
 
         list_bricks.append(bricks_)
 
@@ -73,7 +74,7 @@ def random_eval_all(bricks_initial, num_bricks, num_rounds, num_acq, fun_evaluat
             bricks_.add(next_brick)
 
             time_end = time.time()
-            print('Time consumed:', time_end - time_start, 'sec.')
+            print('Time consumed: {:.4f} sec.'.format(time_end - time_start))
 
         list_bricks.append(bricks_)
 
@@ -151,7 +152,7 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
             print(bricks_.max_bricks)
 
             time_end = time.time()
-            print('Time consumed:', time_end - time_start, 'sec.')
+            print('Time consumed: {:.4f} sec.'.format(time_end - time_start))
 
         if False:
             vis.visualize(bricks_)
@@ -159,7 +160,7 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
         list_bricks.append(bricks_)
 
         if is_save:
-            utils_primitive.save_bricks(bricks_, str_path=str_path)
+            utils_gp.save_bricks(bricks_, str_path=str_path)
 
     return list_bricks
 

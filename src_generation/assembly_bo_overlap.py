@@ -3,19 +3,17 @@ from datetime import datetime
 import time
 import os
 
+from geometric_primitives import bricks
+from geometric_primitives import utils as utils_gp
+
 import bo
-import bricks
 import common
-import utils_primitive
+import constants
 
 
-str_exp = 'assembly_overlap'
+str_exp = 'assembly_bo_overlap'
 str_exp += '_'
-str_exp += 'bo_wo_rollback'
-
-str_path_bricks = '../bricks'
-str_path_dataset = '../dataset'
-str_path_results = '../results'
+str_exp += 'wo_rollback'
 
 ind_class = 21
 ind_target = 1
@@ -24,10 +22,10 @@ str_label = 'label{:02}'.format(ind_class)
 str_target = '{}_{:02}.npy'.format(str_label, ind_target)
 print(str_target)
 
-target = np.load(os.path.join(str_path_dataset, str_target), allow_pickle=True)
+target = np.load(os.path.join(constants.PATH_DATASET, str_target), allow_pickle=True)
 target = target[()]
 print(target.get_length())
-target = utils_primitive.align_bricks_to_origin(target)
+target = utils_gp.align_bricks_to_origin(target)
 
 num_bricks = int(target.get_length() * 0.9)
 
@@ -48,7 +46,7 @@ def evaluate(bricks_):
                 vert_source = brick_source.get_vertices()
                 vert_target = brick_target.get_vertices()
 
-                dist_0, dist_1 = utils_primitive.get_dists(vert_source, vert_target)
+                dist_0, dist_1 = utils_gp.get_dists(vert_source, vert_target)
 
                 if dist_0 > 0 and dist_1 > 0:
                     list_overlaps.append(dist_0 * dist_1)
@@ -70,7 +68,7 @@ if __name__ == '__main__':
     time_bo_acq = 1.0
     
     str_time = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
-    str_path = os.path.join(str_path_bricks, str_time)
+    str_path = os.path.join(constants.PATH_BRICKS, str_time)
 
     bricks_initial = bricks.Bricks(2000)
     bricks_initial.add(target.get_bricks()[0])
@@ -78,11 +76,11 @@ if __name__ == '__main__':
     list_bricks_bo = common.bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_roll_back=False)
 
     time_end_all = time.time()
-    print('overall time:', time_end_all - time_start_all, 'sec.')
+    print('Overall time: {:.4f} sec.'.format(time_end_all - time_start_all))
 
     for ind_bricks, bricks_ in enumerate(list_bricks_bo):
         common.save_results(
-            os.path.join('../results', '{}_class_{:02}_target_{:02}'.format(str_exp, ind_class, ind_target)),
+            os.path.join(constants.PATH_RESULTS, '{}_class_{:02}_target_{:02}'.format(str_exp, ind_class, ind_target)),
             '{}_class_{}_bricks_{}_init_{}_acq_{}_datetime_{}_round_{}'.format(str_exp, ind_class, num_bricks, num_bo_init, num_bo_acq, str_time, ind_bricks),
             fun_evaluation,
             bricks_,

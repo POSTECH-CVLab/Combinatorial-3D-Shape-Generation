@@ -1,10 +1,11 @@
 import numpy as np
 import copy
-from bayeso.gp import gp
-from bayeso import acquisition
 import time
 
-import bricks
+from bayeso.gp import gp
+from bayeso import acquisition
+
+from geometric_primitives import bricks
 
 str_cov = 'matern52'
 
@@ -130,7 +131,7 @@ def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq, is_mult
             Y_all.append([cur_score])
 
         time_end_iteration = time.time()
-        print('Time consumed: {:.4f}'.format(time_end_iteration - time_start_iteration))
+        print('Time consumed: {:.4f} sec.'.format(time_end_iteration - time_start_iteration))
 
     if is_multi:
         ind_best = np.argmin(np.array(Y_all)[:, 0])
