@@ -37,7 +37,7 @@ def random_all(bricks_initial, num_bricks, num_rounds):
             bricks_.add(next_brick)
 
             time_end = time.time()
-            print('time consumed:', time_end - time_start, 'sec.')
+            print('Time consumed:', time_end - time_start, 'sec.')
 
         list_bricks.append(bricks_)
 
@@ -73,13 +73,13 @@ def random_eval_all(bricks_initial, num_bricks, num_rounds, num_acq, fun_evaluat
             bricks_.add(next_brick)
 
             time_end = time.time()
-            print('time consumed:', time_end - time_start, 'sec.')
+            print('Time consumed:', time_end - time_start, 'sec.')
 
         list_bricks.append(bricks_)
 
     return list_bricks
 
-def roll_back(bricks_, fun_evaluation, num_steps=1, threshold=2.5):
+def roll_back(bricks_, fun_evaluation, is_multi, num_steps=1, threshold=2.5):
     list_bricks = bricks_.get_bricks()
     len_bricks = bricks_.get_length()
     if len_bricks - num_steps - 1 < 1:
@@ -93,7 +93,11 @@ def roll_back(bricks_, fun_evaluation, num_steps=1, threshold=2.5):
         cur_bricks = bricks.Bricks(bricks_.max_bricks)
         cur_bricks.bricks = list_bricks[:ind+1]
 #        cur_bricks.validate_all()
-        cur_score = fun_evaluation(cur_bricks)
+
+        if is_multi:
+            cur_score, _ = fun_evaluation(cur_bricks)
+        else:
+            cur_score = fun_evaluation(cur_bricks)
 
         list_scores.append(cur_score)
 
@@ -105,7 +109,7 @@ def roll_back(bricks_, fun_evaluation, num_steps=1, threshold=2.5):
         list_steps.append(gap)
 
     if np.sum(list_steps) > threshold:
-        print('rolling back')
+        print('Rolling back')
         cur_bricks = bricks.Bricks(bricks_.max_bricks)
         cur_bricks.bricks = list_bricks[:len_bricks - num_steps - 1]
         cur_bricks.validate_all()
@@ -114,7 +118,7 @@ def roll_back(bricks_, fun_evaluation, num_steps=1, threshold=2.5):
 
     return cur_bricks
 
-def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_save=False, is_roll_back=False):
+def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_save=False, is_roll_back=False, is_multi=False):
     num_limit = 5
 
     list_bricks = []
@@ -131,15 +135,15 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
             print('{} round {}th bricks'.format(ind_round + 1, ind_brick + 2))
             time_start = time.time()
 
-            next_brick = bo.optimize(fun_evaluation, bricks_, num_bo_acq, num_bo_init, time_bo_acq)[0]
+            next_brick = bo.optimize(fun_evaluation, bricks_, num_bo_acq, num_bo_init, time_bo_acq, is_multi)[0]
             bricks_.add(next_brick)
 
             if is_roll_back:
-                bricks_rolled_back = roll_back(bricks_, fun_evaluation)
+                bricks_rolled_back = roll_back(bricks_, fun_evaluation, is_multi)
 
                 if np.sum(bricks_rolled_back.get_length() == np.array(list_len_bricks_all)) <= num_limit:
                     if not bricks_.get_length() == bricks_rolled_back.get_length():
-                        print('rolled back')
+                        print('Rolled back')
                     bricks_ = copy.deepcopy(bricks_rolled_back)
 
                 list_len_bricks_all.append(bricks_.get_length())
@@ -147,7 +151,7 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
             print(bricks_.max_bricks)
 
             time_end = time.time()
-            print('time consumed:', time_end - time_start, 'sec.')
+            print('Time consumed:', time_end - time_start, 'sec.')
 
         if False:
             vis.visualize(bricks_)
@@ -159,37 +163,37 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
 
     return list_bricks
 
-def save_results(str_path, str_file, fun_evaluation, list_list_bricks, list_str_exps):
+def save_results(str_path, str_file, fun_evaluation, bricks_, str_exp, is_multi):
     if not os.path.exists(str_path):
         os.makedirs(str_path)
     str_path_ = os.path.join(str_path, str_file)
 
     dict_results = {}
 
-    for list_bricks, str_exp in zip(list_list_bricks, list_str_exps):
-        list_scores_all = []
-        list_length_all = []
+    list_bricks_ = bricks_.get_bricks()
 
-        for bricks_ in list_bricks:
-            list_bricks_ = bricks_.get_bricks()
+    list_scores = []
+    list_lengths = []
 
-            list_scores = []
-            list_length = []
+    bricks_tested = bricks.Bricks(bricks_.max_bricks)
 
-            bricks_tested = bricks.Bricks(bricks_.max_bricks)
+    for cur_brick in list_bricks_:
+        bricks_tested.add(cur_brick)
 
-            for cur_brick in list_bricks_:
-                bricks_tested.add(cur_brick)
+        if is_multi:
+            score, _ = fun_evaluation(bricks_tested)
+        else:
+            score = fun_evaluation(bricks_tested)
 
-                score = fun_evaluation(bricks_tested)
+        list_scores.append(score)
+        list_lengths.append(bricks_tested.get_length())
 
-                list_scores.append([score])
-                list_length.append(bricks_tested.get_length())
+    dict_result = {
+        'str_exp': str_exp,
+        'bricks': bricks_,
+        'list_scores': list_scores,
+        'list_lengths': list_lengths,
+    }
 
-            list_scores_all.append(list_scores)
-            list_length_all.append(list_length)
-
-        dict_results[str_exp] = zip(list_bricks, list_scores_all, list_length_all)
-
-    np.save(str_path_, dict_results)
+    np.save(str_path_, dict_result)
     return

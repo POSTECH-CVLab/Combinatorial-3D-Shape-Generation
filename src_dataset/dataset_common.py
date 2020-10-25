@@ -1,7 +1,7 @@
 import time
 import os
 
-import utils_primitive
+from geometric_primitives import utils as utils_gp
 
 
 STR_COMBI_DATASET = 'dataset'
@@ -54,6 +54,5 @@ def create_bricks(list_bricks, str_label):
     for ind_bricks_, bricks_ in enumerate(list_bricks):
         print('Creating bricks {}'.format(ind_bricks_ + 1))
 
-        utils_primitive.save_bricks(bricks_, STR_PATH_COMBI_DATASET, str_file='{}_{:02}'.format(str_label, ind_bricks_+1))
+        utils_gp.save_bricks(bricks_, STR_PATH_COMBI_DATASET, str_file='{}_{:02}'.format(str_label, ind_bricks_+1))
         time.sleep(1)
-

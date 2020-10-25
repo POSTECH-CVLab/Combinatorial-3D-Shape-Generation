@@ -1,7 +1,8 @@
 import copy
 
-import brick
-import bricks
+from geometric_primitives import brick
+from geometric_primitives import bricks
+
 import dataset_common
 
 

@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
     fun_evaluation = lambda bricks_: evaluate(bricks_)
 
-    num_bo_rounds = 3
+    num_bo_rounds = 1
     num_bo_init = 10
     num_bo_acq = 10
 
@@ -80,10 +80,12 @@ if __name__ == '__main__':
     time_end_all = time.time()
     print('overall time:', time_end_all - time_start_all, 'sec.')
 
-    common.save_results(
-        os.path.join('../results', '{}_class_{:02}_target_{:02}'.format(str_exp, ind_class, ind_target)),
-        '{}_class_{}_bricks_{}_rounds_{}_init_{}_acq_{}_datetime_{}'.format(str_exp, ind_class, num_bricks, num_bo_rounds, num_bo_init, num_bo_acq, str_time),
-        fun_evaluation,
-        list_bricks_bo,
-        str_exp,
-    )
+    for ind_bricks, bricks_ in enumerate(list_bricks_bo):
+        common.save_results(
+            os.path.join('../results', '{}_class_{:02}_target_{:02}'.format(str_exp, ind_class, ind_target)),
+            '{}_class_{}_bricks_{}_init_{}_acq_{}_datetime_{}_round_{}'.format(str_exp, ind_class, num_bricks, num_bo_init, num_bo_acq, str_time, ind_bricks),
+            fun_evaluation,
+            bricks_,
+            str_exp,
+            False
+        )

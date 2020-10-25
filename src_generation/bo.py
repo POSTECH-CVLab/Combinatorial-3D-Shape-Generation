@@ -16,7 +16,15 @@ def _optimize_objective(fun_acquisition, X_train, Y_train, X_test, cov_X_X, inv_
 
     return acquisitions
 
-def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq):
+def get_weights():
+    bw = np.random.uniform(size=2)
+    bw[0] = 0.8 + bw[0] * 0.1
+    bw[1] = bw[1] * 0.1
+
+    bw /= np.linalg.norm(bw, ord=1)
+    return bw
+
+def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq, is_multi):
     bricks_all = bricks_.sample(num_init)
 
     X_all = []
@@ -26,11 +34,18 @@ def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq):
         bricks_copied = copy.deepcopy(bricks_)
         bricks_copied.add(cur_brick)
 
-        cur_score = fun_evaluation(bricks_copied)
+        if is_multi:
+            bw = get_weights()
+
+            cur_score_1, cur_score_2 = fun_evaluation(bricks_copied)
+            Y_all.append([cur_score_1, cur_score_2, bw[0] * cur_score_1 + bw[1] * cur_score_2])
+        else:
+            cur_score = fun_evaluation(bricks_copied)
+            Y_all.append([cur_score])
+
         cur_vector = cur_brick.get_position_direction()
 
         X_all.append(cur_vector)
-        Y_all.append([cur_score])
 
     while len(bricks_all) <= num_init + num_bricks:
         print('Iteration', len(bricks_all))
@@ -38,13 +53,28 @@ def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq):
 
         time_start_iteration = time.time()
 
-        cov_X_X, inv_cov_X_X, hyps = gp.get_optimized_kernel(
-            np.array(X_all),
-            np.array(Y_all),
-            None, str_cov, debug=False)
         fun_acquisition = acquisition.ucb
 
-        fun_negative_acquisition = lambda X_test: -1.0 * _optimize_objective(fun_acquisition, np.array(X_all), np.array(Y_all), X_test, cov_X_X, inv_cov_X_X, hyps)
+        if is_multi:
+            cov_X_X_1, inv_cov_X_X_1, hyps_1 = gp.get_optimized_kernel(
+                np.array(X_all),
+                np.array(Y_all)[:, 0][..., np.newaxis],
+                None, str_cov, debug=False)
+
+            cov_X_X_2, inv_cov_X_X_2, hyps_2 = gp.get_optimized_kernel(
+                np.array(X_all),
+                np.array(Y_all)[:, 1][..., np.newaxis],
+                None, str_cov, debug=False)
+
+            fun_negative_acquisition_1 = lambda X_test: -1.0 * _optimize_objective(fun_acquisition, np.array(X_all), np.array(Y_all)[:, 0][..., np.newaxis], X_test, cov_X_X_1, inv_cov_X_X_1, hyps_1)
+            fun_negative_acquisition_2 = lambda X_test: -1.0 * _optimize_objective(fun_acquisition, np.array(X_all), np.array(Y_all)[:, 1][..., np.newaxis], X_test, cov_X_X_2, inv_cov_X_X_2, hyps_2)
+        else:
+            cov_X_X, inv_cov_X_X, hyps = gp.get_optimized_kernel(
+                np.array(X_all),
+                np.array(Y_all),
+                None, str_cov, debug=False)
+
+            fun_negative_acquisition = lambda X_test: -1.0 * _optimize_objective(fun_acquisition, np.array(X_all), np.array(Y_all), X_test, cov_X_X, inv_cov_X_X, hyps)
 
         bo_bricks = []
         bo_vectors = []
@@ -61,7 +91,7 @@ def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq):
             cur_time = time.time()
             num_iters += 1
 
-        print('#samples:', len(bricks_sampled))
+        print('#Samples:', len(bricks_sampled))
 
         num_duplicated = 0
         for brick_sampled in bricks_sampled:
@@ -71,9 +101,19 @@ def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq):
                 bo_vectors.append(cur_vector)
             else:
                 num_duplicated += 1
-        print('#duplicates:', num_duplicated)
 
-        bo_acqs = fun_negative_acquisition(np.array(bo_vectors))
+        print('#Duplicates:', num_duplicated)
+
+        if is_multi:
+            bo_acqs_1 = fun_negative_acquisition_1(np.array(bo_vectors))
+            bo_acqs_2 = fun_negative_acquisition_2(np.array(bo_vectors))
+
+            bw = get_weights()
+
+            bo_acqs = bw[0] * bo_acqs_1 + bw[1] * bo_acqs_2
+        else:
+            bo_acqs = fun_negative_acquisition(np.array(bo_vectors))
+
         bo_ind = bo_acqs.argsort()[0]
 
         bricks_all.append(bo_bricks[bo_ind])
@@ -82,13 +122,21 @@ def optimize(fun_evaluation, bricks_, num_bricks, num_init, time_bo_acq):
         bo_bricks_copied = copy.deepcopy(bricks_)
         bo_bricks_copied.add(bo_bricks[bo_ind])
 
-        cur_score = fun_evaluation(bo_bricks_copied)
+        if is_multi:
+            cur_score_1, cur_score_2 = fun_evaluation(bo_bricks_copied)
+            Y_all.append([cur_score_1, cur_score_2, bw[0] * cur_score_1 + bw[1] * cur_score_2])
+        else:
+            cur_score = fun_evaluation(bo_bricks_copied)
+            Y_all.append([cur_score])
 
-        Y_all.append([cur_score])
         time_end_iteration = time.time()
-        print('time consumed: {:.4f}'.format(time_end_iteration - time_start_iteration))
+        print('Time consumed: {:.4f}'.format(time_end_iteration - time_start_iteration))
 
-    ind_best = np.argmin(Y_all)
+    if is_multi:
+        ind_best = np.argmin(np.array(Y_all)[:, 0])
+    else:
+        ind_best = np.argmin(Y_all)
+
     bricks_all = [bricks_all[ind_best]]
 
 #    print(X_all)

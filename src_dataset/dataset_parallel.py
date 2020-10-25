@@ -1,7 +1,8 @@
-import brick
-import bricks
+from geometric_primitives import brick
+from geometric_primitives import bricks
+from geometric_primitives import rules
+
 import dataset_common
-import rules
 
 
 if __name__ == '__main__':
