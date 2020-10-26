@@ -5,7 +5,7 @@ import open3d as o3d
 from geometric_primitives import bricks
 from geometric_primitives import brick
 
-import visualization as vis
+import utils
 import constants
 
 
@@ -25,7 +25,7 @@ def save_meshes(str_source, str_meshes, str_files):
         bricks_ = bricks_[()]
         print(bricks_)
 
-        mesh_bricks, mesh_cubes = vis.visualize(bricks_)
+        mesh_bricks, mesh_cubes = utils.get_mesh_bricks(bricks_)
 
         new_mesh = None
         for ind_mesh, mesh_brick in enumerate(mesh_bricks):
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     brick_.set_direction(0)
     bricks_.add(brick_)
     
-    mesh_bricks, mesh_cubes = vis.visualize(bricks_)
+    mesh_bricks, mesh_cubes = utils.get_mesh_bricks(bricks_)
     mesh_brick = mesh_bricks[0]
 
     mesh_brick.paint_uniform_color(np.array([1.0, 0.0, 0.0]))

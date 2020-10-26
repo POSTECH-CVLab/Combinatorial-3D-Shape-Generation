@@ -9,6 +9,7 @@
 <bsdf type="twosided" id="blue"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.05, 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
 
 <shape type="ply"> <string name="filename" value="label01_02/label01_02_1.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label01_02/label01_02_2.ply"/> <ref id="blue"/> </shape>
 
 <shape type="obj"> <string name="filename" value="plane.obj"/> <transform name="toWorld"> <translate x="0" y=".3" z="0"/> </transform> <bsdf type="diffuse"> <spectrum name="reflectance" value="0.5"/> </bsdf> </shape>
 <sensor type="perspective"> <string name="fovAxis" value="smaller"/> <float name="focusDistance" value="10000"/>

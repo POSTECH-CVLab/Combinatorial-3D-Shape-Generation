@@ -7,15 +7,6 @@ import constants
 
 
 def preprocess(model, color):
-    '''
-    model.transform(np.array([
-        [0.975, 0, 0, 0],
-        [0, 1.03, 0, 0],
-        [0, 0, 1, 0],
-        [0, 0, 0, 1],
-    ]))
-    '''
-
     min_bound = model.get_min_bound()
     max_bound = model.get_max_bound()
     center = min_bound + (max_bound - min_bound) / 2.0
@@ -28,7 +19,49 @@ def preprocess(model, color):
 
     return model
 
-def visualize(bricks_, is_draw=False):
+def get_cube(color):
+    path_cube = os.path.join(constants.PATH_UNIT_MESHES, constants.STR_CUBE)
+
+    mesh_cube = o3d.io.read_triangle_mesh(path_cube)
+    mesh_cube = preprocess(mesh_cube, color)
+
+    mesh_cube.translate(np.array([
+        [0],
+        [0],
+        [0]
+    ]))
+
+    mesh_cube.transform(np.array([
+        [0.735, 0, 0, 0],
+        [0, 1.4775, 0, 0],
+        [0, 0, 0.445, 0],
+        [0, 0, 0, 1],
+    ]))
+
+    return mesh_cube
+
+def get_voxel(color):
+    path_cube = os.path.join(constants.PATH_UNIT_MESHES, constants.STR_CUBE)
+
+    mesh_cube = o3d.io.read_triangle_mesh(path_cube)
+    mesh_cube = preprocess(mesh_cube, color)
+
+    mesh_cube.translate(np.array([
+        [0],
+        [0],
+        [0]
+    ]))
+
+    mesh_cube.transform(np.array([
+        [0.5, 0, 0, 0],
+        [0, 0.5, 0, 0],
+        [0, 0, 0.5, 0],
+        [0, 0, 0, 1],
+    ]))
+
+    return mesh_cube
+
+def get_mesh_bricks(bricks_):
     np.random.seed(43)
 
     path_lego_2_4 = os.path.join(constants.PATH_UNIT_MESHES, constants.STR_LEGO_2_4)
@@ -72,12 +105,9 @@ def visualize(bricks_, is_draw=False):
 
         mesh_cube.rotate(mesh_cube.get_rotation_matrix_from_xyz((0.0, 0.0, np.pi / 2.0 * direc)))
 
-    if is_draw:
-        o3d.visualization.draw_geometries(mesh_bricks)
-
     return mesh_bricks, mesh_cubes
 
-def visualize_voxels(voxels_, is_draw=True):
+def get_mesh_voxels(voxels_):
     np.random.seed(43)
 
     len_voxels = voxels_.get_length()
@@ -110,49 +140,4 @@ def visualize_voxels(voxels_, is_draw=True):
         ]))
 #        mesh_voxel.rotate(mesh_voxel.get_rotation_matrix_from_xyz((0.0, 0.0, np.pi / 2.0 * direc)))
 
-    if is_draw:
-        o3d.visualization.draw_geometries(mesh_voxels)
-
     return mesh_voxels
-
-def get_cube(color):
-    path_cube = os.path.join(constants.PATH_UNIT_MESHES, constants.STR_CUBE)
-
-    mesh_cube = o3d.io.read_triangle_mesh(path_cube)
-    mesh_cube = preprocess(mesh_cube, color)
-
-    mesh_cube.translate(np.array([
-        [0],
-        [0],
-        [0]
-    ]))
-
-    mesh_cube.transform(np.array([
-        [0.735, 0, 0, 0],
-        [0, 1.4775, 0, 0],
-        [0, 0, 0.445, 0],
-        [0, 0, 0, 1],
-    ]))
-
-    return mesh_cube
-
-def get_voxel(color):
-    path_cube = os.path.join(constants.PATH_UNIT_MESHES, constants.STR_CUBE)
-
-    mesh_cube = o3d.io.read_triangle_mesh(path_cube)
-    mesh_cube = preprocess(mesh_cube, color)
-
-    mesh_cube.translate(np.array([
-        [0],
-        [0],
-        [0]
-    ]))
-
-    mesh_cube.transform(np.array([
-        [0.5, 0, 0, 0],
-        [0, 0.5, 0, 0],
-        [0, 0, 0.5, 0],
-        [0, 0, 0, 1],
-    ]))
-
-    return mesh_cube
