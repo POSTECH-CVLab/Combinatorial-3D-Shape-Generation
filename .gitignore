@@ -133,3 +133,4 @@ dmypy.json
 __MACOSX/
 *.swp
 results/
+*_all.ply

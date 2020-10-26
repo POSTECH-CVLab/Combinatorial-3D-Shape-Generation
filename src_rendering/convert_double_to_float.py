@@ -5,11 +5,11 @@ import constants
 
 
 if __name__ == '__main__':
-    str_files = os.listdir(constants.STR_MESHES)
+    str_files = os.listdir(constants.PATH_MESHES)
     print(str_files)
 
     for str_file in str_files:
-        str_path_file = os.path.join(constants.STR_MESHES, str_file)
+        str_path_file = os.path.join(constants.PATH_MESHES, str_file)
 
         if os.path.isdir(str_path_file):
             str_plys = os.listdir(str_path_file)

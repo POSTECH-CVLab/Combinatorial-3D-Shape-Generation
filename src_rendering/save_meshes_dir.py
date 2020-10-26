@@ -4,13 +4,14 @@ import open3d as o3d
 
 from geometric_primitives import bricks
 from geometric_primitives import brick
-from geometric_primitives import visualization as vis
 
+import visualization as vis
 import constants
 
 
 def save_meshes(str_source, str_meshes, str_files):
     for str_file in str_files:
+        print('Creating {}'.format(str_file[:-4]))
         str_brick = os.path.join(str_source, str_file)
         str_meshes_ = os.path.join(str_meshes, str_file[:-4])
 
@@ -54,11 +55,11 @@ def save_meshes(str_source, str_meshes, str_files):
 
 
 if __name__ == '__main__':
-    str_files_dataset = os.listdir(constnats.STR_DATASET)
+    str_files_dataset = os.listdir(constants.PATH_DATASET)
     print(str_files_dataset)
 
-    if not os.path.exists(constants.STR_MESHES):
-        os.mkdir(constants.STR_MESHES)
+    if not os.path.exists(constants.PATH_MESHES):
+        os.mkdir(constants.PATH_MESHES)
 
     # single brick
     bricks_ = bricks.Bricks(20)
@@ -81,7 +82,7 @@ if __name__ == '__main__':
         [0]
     ]))
 
-    str_meshes_ = os.path.join(str_meshes, 'single_brick')
+    str_meshes_ = os.path.join(constants.PATH_MESHES, 'single_brick')
 
     if not os.path.exists(str_meshes_):
         os.mkdir(str_meshes_)
@@ -89,4 +90,4 @@ if __name__ == '__main__':
     str_save = os.path.join(str_meshes_, 'single_brick_1.ply')
     o3d.io.write_triangle_mesh(str_save, mesh_brick, write_ascii=True)
 
-    save_meshes(constants.STR_DATASET, constants.STR_MESHES, str_files_dataset)
+    save_meshes(constants.PATH_DATASET, constants.PATH_MESHES, str_files_dataset)

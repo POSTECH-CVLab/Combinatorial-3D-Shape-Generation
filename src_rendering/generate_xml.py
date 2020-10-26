@@ -31,12 +31,12 @@ def generate(str_path, str_file, num_shapes):
 
 
 if __name__ == '__main__':
-    str_files = os.listdir(constants.STR_MESHES)
+    str_files = os.listdir(constants.PATH_MESHES)
     str_files.sort()
     print(str_files)
 
     for str_file in str_files:
-        str_path_file = os.path.join(constants.STR_MESHES, str_file)
+        str_path_file = os.path.join(constants.PATH_MESHES, str_file)
         print(str_path_file)
 
         if os.path.isdir(str_path_file):
@@ -47,5 +47,5 @@ if __name__ == '__main__':
                 num_shapes = len(str_plys) - 1
             print(num_shapes)
 
-            generate(constants.STR_MESHES, str_file, num_shapes)
+            generate(constants.PATH_MESHES, str_file, num_shapes)
 
