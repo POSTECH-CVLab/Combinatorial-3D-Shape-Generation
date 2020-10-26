@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+<integrator type="direct"> <integer name="bsdfSamples" value="4"/> <integer name="emitterSamples" value="8"/> <boolean name="hideEmitters" value="true"/> </integrator>
+<emitter type="envmap" id="Area_002-light"> <string name="filename" value="envmap.exr"/> <transform name="toWorld"> <rotate y="1" angle="215"/> <matrix value="1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 "/> </transform> <float name="scale" value="7"/> </emitter>
+<bsdf type="twosided" id="white"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.4 0.4 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="red"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.4, 0.05, 0.05"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="green"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.4, 0.05"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="blue"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.05, 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_1.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_2.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_3.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_4.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_5.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_6.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_7.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_8.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_9.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_10.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_11.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_12.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_13.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_14.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_15.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_16.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_17.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_18.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_19.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_20.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_21.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_22.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_23.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_24.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_25.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_26.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_27.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_28.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_29.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_30.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_31.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_32.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_33.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_34.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_35.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_36.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_37.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_38.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_39.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_40.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_41.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_42.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_43.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_44.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_45.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_46.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_47.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_48.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_49.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_50.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_51.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_52.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_53.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_54.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_55.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_56.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_57.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_58.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_59.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_60.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_61.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_62.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_63.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_64.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_65.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_66.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_67.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label24_18/label24_18_68.ply"/> <ref id="blue"/> </shape>
+
+<shape type="obj"> <string name="filename" value="plane.obj"/> <transform name="toWorld"> <translate x="0" y="2.85" z="0"/> </transform> <bsdf type="diffuse"> <spectrum name="reflectance" value="0.5"/> </bsdf> </shape>
+<sensor type="perspective"> <string name="fovAxis" value="smaller"/> <float name="focusDistance" value="10000"/>
+
+<transform name="toWorld">
+<lookAt origin="14.0, 18.0, 10.0" target="5.2, 10.3, 3.4" up="0.0, 1.0, 0.0"/>
+</transform>
+
+<float name="fov" value="18"/>
+
+<sampler type="ldsampler"> <integer name="sampleCount" value="128"/> </sampler>
+<film type="ldrfilm"> <integer name="width" value="1024"/> <integer name="height" value="768"/> <boolean name="banner" value="false"/> <string name="pixelFormat" value="rgb"/> <rfilter type="gaussian"/> </film>
+</sensor>
+</scene>

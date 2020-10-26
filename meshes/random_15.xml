@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+<integrator type="direct"> <integer name="bsdfSamples" value="4"/> <integer name="emitterSamples" value="8"/> <boolean name="hideEmitters" value="true"/> </integrator>
+<emitter type="envmap" id="Area_002-light"> <string name="filename" value="envmap.exr"/> <transform name="toWorld"> <rotate y="1" angle="215"/> <matrix value="1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 "/> </transform> <float name="scale" value="7"/> </emitter>
+<bsdf type="twosided" id="white"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.4 0.4 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="red"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.4, 0.05, 0.05"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="green"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.4, 0.05"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="blue"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.05, 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+
+<shape type="ply"> <string name="filename" value="random_15/random_15_1.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_2.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_3.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_4.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_5.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_6.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_7.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_8.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_9.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_10.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_11.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_12.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_13.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_14.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_15.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_16.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_17.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_18.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_19.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_20.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_21.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_22.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_23.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_24.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_25.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_26.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_27.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_28.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_29.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_30.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_31.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_32.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_33.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_34.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_35.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_36.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_37.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_38.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_39.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_40.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_41.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_42.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_43.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_44.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_45.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_46.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_47.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_48.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_49.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_50.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_51.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_52.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_53.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_54.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_55.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_56.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_57.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_58.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_59.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_60.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_61.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_62.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_63.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_64.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_65.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_66.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_67.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_68.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_69.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_70.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_71.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_72.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_73.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_74.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_75.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_76.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_77.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_78.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_79.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_80.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_81.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_82.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="random_15/random_15_83.ply"/> <ref id="blue"/> </shape>
+
+<shape type="obj"> <string name="filename" value="plane.obj"/> <transform name="toWorld"> <translate x="0" y=".3" z="0"/> </transform> <bsdf type="diffuse"> <spectrum name="reflectance" value="0.5"/> </bsdf> </shape>
+<sensor type="perspective"> <string name="fovAxis" value="smaller"/> <float name="focusDistance" value="10000"/>
+
+<transform name="toWorld">
+<lookAt origin="0.01, 15.0, 0.0" target="0.0, 0.0, 0.0" up="0.0, 1.0, 0.0"/>
+</transform>
+
+<float name="fov" value="18"/>
+
+<sampler type="ldsampler"> <integer name="sampleCount" value="128"/> </sampler>
+<film type="ldrfilm"> <integer name="width" value="1024"/> <integer name="height" value="768"/> <boolean name="banner" value="false"/> <string name="pixelFormat" value="rgb"/> <rfilter type="gaussian"/> </film>
+</sensor>
+</scene>

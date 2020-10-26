@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+<integrator type="direct"> <integer name="bsdfSamples" value="4"/> <integer name="emitterSamples" value="8"/> <boolean name="hideEmitters" value="true"/> </integrator>
+<emitter type="envmap" id="Area_002-light"> <string name="filename" value="envmap.exr"/> <transform name="toWorld"> <rotate y="1" angle="215"/> <matrix value="1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 "/> </transform> <float name="scale" value="7"/> </emitter>
+<bsdf type="twosided" id="white"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.4 0.4 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="red"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.4, 0.05, 0.05"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="green"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.4, 0.05"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+<bsdf type="twosided" id="blue"> <bsdf type="plastic"> <srgb name="diffuseReflectance" value="0.05, 0.05, 0.4"/> <string name="intIOR" value="pet"/> <float name="roughness" value="0.01"/> </bsdf> </bsdf>
+
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_1.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_2.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_3.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_4.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_5.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_6.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_7.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_8.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_9.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_10.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_11.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_12.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_13.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_14.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_15.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_16.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_17.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_18.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_19.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_20.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_21.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_22.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_23.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_24.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_25.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_26.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_27.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_28.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_29.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_30.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_31.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_32.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_33.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_34.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_35.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_36.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_37.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_38.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_39.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_40.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_41.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_42.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_43.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_44.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_45.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_46.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_47.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_48.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_49.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_50.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_51.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_52.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_53.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_54.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_55.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_56.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_57.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_58.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_59.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_60.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_61.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_62.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_63.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_64.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_65.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_66.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_67.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_68.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_69.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_70.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_71.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_72.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_73.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_74.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_75.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_76.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_77.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_78.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_79.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_80.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_81.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_82.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_83.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_84.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_85.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_86.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_87.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_88.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_89.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_90.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_91.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_92.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_93.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_94.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_95.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_96.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_97.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_98.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_99.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_100.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_101.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_102.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_103.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_104.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_105.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_106.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_107.ply"/> <ref id="blue"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_108.ply"/> <ref id="green"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_109.ply"/> <ref id="red"/> </shape>
+<shape type="ply"> <string name="filename" value="label21_09/label21_09_110.ply"/> <ref id="blue"/> </shape>
+
+<shape type="obj"> <string name="filename" value="plane.obj"/> <transform name="toWorld"> <translate x="0" y=".3" z="0"/> </transform> <bsdf type="diffuse"> <spectrum name="reflectance" value="0.5"/> </bsdf> </shape>
+<sensor type="perspective"> <string name="fovAxis" value="smaller"/> <float name="focusDistance" value="10000"/>
+
+<transform name="toWorld">
+<lookAt origin="0.01, 15.0, 0.0" target="0.0, 0.0, 0.0" up="0.0, 1.0, 0.0"/>
+</transform>
+
+<float name="fov" value="18"/>
+
+<sampler type="ldsampler"> <integer name="sampleCount" value="128"/> </sampler>
+<film type="ldrfilm"> <integer name="width" value="1024"/> <integer name="height" value="768"/> <boolean name="banner" value="false"/> <string name="pixelFormat" value="rgb"/> <rfilter type="gaussian"/> </film>
+</sensor>
+</scene>

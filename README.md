@@ -1,1 +1,1 @@
-# combinatorial-3d-shape-dataset
+# Combinatorial-3D-Shape-Generation
