@@ -6,7 +6,6 @@
     author={Kim, Jungtaek and Chung, Hyunsoo and Lee, Jinhwi and Cho, Minsu and Park, Jaesik},
     title={Combinatorial {3D} Shape Generation via Sequential Assembly},
     journal={{arXiv} preprint {arXiv}:2004.07414},
-    howpublished={\url{http://bayeso.org}},
     year={2020}
 }
 ```
