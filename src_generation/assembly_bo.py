@@ -11,12 +11,30 @@ import common
 import constants
 
 
+use_stability = False
+use_rollback = True
+
 str_exp = 'assembly_bo_overlap'
-str_exp += '_'
-str_exp += 'wo_rollback'
+
+if use_stability:
+    import stability
+
+    str_exp += '_'
+    str_exp += 'w_stability'
+
+
+if use_rollback:
+    str_exp += '_'
+    str_exp += 'w_rollback'
+
+num_bo_rounds = 1
+num_bo_init = 10
+num_bo_acq = 10
 
 ind_class = 21
 ind_target = 1
+
+time_bo_acq = 1.0
 
 str_label = 'label{:02}'.format(ind_class)
 str_target = '{}_{:02}.npy'.format(str_label, ind_target)
@@ -51,21 +69,23 @@ def evaluate(bricks_):
                 if dist_0 > 0 and dist_1 > 0:
                     list_overlaps.append(dist_0 * dist_1)
 
-    score_ = np.max(list_overlaps) * -1.0
-    print(score_)
-    return score_
+    score_overlap = np.max(list_overlaps) * -1.0
+    print(score_overlap)
+
+    if use_stability:
+        time_to_be_stable = stability.get_time_to_be_stable(bricks_)
+        print('Time to be stable:', time_to_be_stable)
+        score_stability = (time_to_be_stable - 200.0)
+        score_stability = np.tanh(score_stability / 200.0) * 1.0
+        return score_overlap, score_stability
+    else:
+        return score_overlap
 
 
 if __name__ == '__main__':
     time_start_all = time.time()
 
     fun_evaluation = lambda bricks_: evaluate(bricks_)
-
-    num_bo_rounds = 1
-    num_bo_init = 10
-    num_bo_acq = 10
-
-    time_bo_acq = 1.0
     
     str_time = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
     str_path = os.path.join(constants.PATH_BRICKS, str_time)
@@ -73,7 +93,7 @@ if __name__ == '__main__':
     bricks_initial = bricks.Bricks(2000)
     bricks_initial.add(target.get_bricks()[0])
 
-    list_bricks_bo = common.bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_roll_back=False)
+    list_bricks_bo = common.bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_roll_back=use_rollback, is_multi=use_stability)
 
     time_end_all = time.time()
     print('Overall time: {:.4f} sec.'.format(time_end_all - time_start_all))
@@ -85,5 +105,5 @@ if __name__ == '__main__':
             fun_evaluation,
             bricks_,
             str_exp,
-            False
+            use_stability
         )

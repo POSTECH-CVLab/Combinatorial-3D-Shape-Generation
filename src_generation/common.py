@@ -5,7 +5,6 @@ import copy
 
 from geometric_primitives import brick
 from geometric_primitives import bricks
-from geometric_primitives import visualization as vis
 from geometric_primitives import utils as utils_gp
 
 import bo
@@ -155,7 +154,7 @@ def bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, t
             print('Time consumed: {:.4f} sec.'.format(time_end - time_start))
 
         if False:
-            vis.visualize(bricks_)
+            utils_gp.visualize(bricks_)
 
         list_bricks.append(bricks_)
 

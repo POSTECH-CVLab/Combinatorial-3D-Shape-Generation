@@ -12,7 +12,7 @@ str_cov = 'matern52'
 
 def _optimize_objective(fun_acquisition, X_train, Y_train, X_test, cov_X_X, inv_cov_X_X, hyps):
     X_test = np.atleast_2d(X_test)
-    pred_mean, pred_std, _ = gp.predict_test_(X_train, Y_train, X_test, cov_X_X, inv_cov_X_X, hyps, str_cov=str_cov, prior_mu=None, debug=False)
+    pred_mean, pred_std, _ = gp.predict_with_cov(X_train, Y_train, X_test, cov_X_X, inv_cov_X_X, hyps, str_cov=str_cov, prior_mu=None, debug=False)
     acquisitions = fun_acquisition(pred_mean=pred_mean.flatten(), pred_std=pred_std.flatten(), Y_train=Y_train)
 
     return acquisitions
