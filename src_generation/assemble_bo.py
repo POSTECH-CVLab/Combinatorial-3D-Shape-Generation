@@ -2,17 +2,30 @@ import numpy as np
 from datetime import datetime
 import time
 import os
+import argparse
 
 from geometric_primitives import bricks
 from geometric_primitives import utils as utils_gp
 
 import bo
-import common
+import wrappers
+import utils
 import constants
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--ind_class', type=int)
+parser.add_argument('--ind_target', type=int)
+parser.add_argument('--use_stability', action='store_true')
+parser.add_argument('--use_rollback', action='store_true')
+args = parser.parse_args()
 
-use_stability = False
-use_rollback = True
+print('ind_class', args.ind_class, type(args.ind_class))
+print('ind_target', args.ind_target, type(args.ind_target))
+print('use_stability', args.use_stability, type(args.use_stability))
+print('use_rollback', args.use_rollback, type(args.use_rollback))
+
+use_stability = args.use_stability
+use_rollback = args.use_rollback
 
 str_exp = 'assembly_bo_overlap'
 
@@ -27,14 +40,14 @@ if use_rollback:
     str_exp += '_'
     str_exp += 'w_rollback'
 
-num_bo_rounds = 1
 num_bo_init = 10
 num_bo_acq = 10
 
-ind_class = 21
-ind_target = 1
-
 time_bo_acq = 1.0
+
+ind_class = args.ind_class
+ind_target = args.ind_target
+
 
 str_label = 'label{:02}'.format(ind_class)
 str_target = '{}_{:02}.npy'.format(str_label, ind_target)
@@ -93,17 +106,17 @@ if __name__ == '__main__':
     bricks_initial = bricks.Bricks(2000)
     bricks_initial.add(target.get_bricks()[0])
 
-    list_bricks_bo = common.bo_all(bricks_initial, num_bricks, num_bo_rounds, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_roll_back=use_rollback, is_multi=use_stability)
+    bricks_bo = wrappers.bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_roll_back=use_rollback, is_multi=use_stability)
 
     time_end_all = time.time()
     print('Overall time: {:.4f} sec.'.format(time_end_all - time_start_all))
 
-    for ind_bricks, bricks_ in enumerate(list_bricks_bo):
-        common.save_results(
-            os.path.join(constants.PATH_RESULTS, '{}_class_{:02}_target_{:02}'.format(str_exp, ind_class, ind_target)),
-            '{}_class_{}_bricks_{}_init_{}_acq_{}_datetime_{}_round_{}'.format(str_exp, ind_class, num_bricks, num_bo_init, num_bo_acq, str_time, ind_bricks),
-            fun_evaluation,
-            bricks_,
-            str_exp,
-            use_stability
-        )
+    ind_bricks = 1
+    utils.save_results(
+        os.path.join(constants.PATH_RESULTS, '{}_class_{:02}_target_{:02}'.format(str_exp, ind_class, ind_target)),
+        '{}_class_{}_bricks_{}_init_{}_acq_{}_datetime_{}_round_{}'.format(str_exp, ind_class, num_bricks, num_bo_init, num_bo_acq, str_time, ind_bricks),
+        fun_evaluation,
+        bricks_bo,
+        str_exp,
+        use_stability
+    )

@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 python dataset_parallel.py
 python dataset_perpendicular.py
 python dataset_bar.py

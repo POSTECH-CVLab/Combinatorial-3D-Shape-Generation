@@ -10,12 +10,25 @@ You are able to install required Python packages by commanding `pip install -r r
 
 * Creating a dataset
 
+Run the following script.
+
 ```shell
-# In src_dataset/
+# Move to src_dataset/
 $ ./dataset_all.sh 
 ```
 
+It will create a dataset, which has already been included in the repository.
+
 * Generating a 3D shape
+
+```shell
+# Move to src_generation/
+$ ./assemble_bo.py --ind_class 21 --ind_target 1 --use_stability --use_rollback
+```
+
+`ind_class` and `ind_target` indicate the indices of class and target object, respectively. Please check the code for dataset creation.
+`use_stability` and `use_rollback` are flags for considering stability and using a rollback step.
+
 * Creaing an XML file and its corresponding PLY files
 
 ## Connection Types Between Two 2-by-4 Bricks
