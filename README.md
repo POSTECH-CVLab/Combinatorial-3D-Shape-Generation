@@ -4,11 +4,56 @@
 
 <p align="center">
 <img src="./meshes/label01_01.png" width="80" />
+<img src="./meshes/label01_02.png" width="80" />
+<img src="./meshes/label01_03.png" width="80" />
+<img src="./meshes/label01_04.png" width="80" />
+<img src="./meshes/label01_05.png" width="80" />
+<img src="./meshes/label01_06.png" width="80" />
+<img src="./meshes/label01_07.png" width="80" />
+<img src="./meshes/label01_08.png" width="80" />
+<img src="./meshes/label01_09.png" width="80" />
+<img src="./meshes/label01_10.png" width="80" />
+<img src="./meshes/label01_11.png" width="80" />
+<img src="./meshes/label01_12.png" width="80" />
+<img src="./meshes/label01_13.png" width="80" />
+<img src="./meshes/label01_14.png" width="80" />
+<img src="./meshes/label01_15.png" width="80" />
+<img src="./meshes/label01_16.png" width="80" />
+<img src="./meshes/label01_17.png" width="80" />
+<img src="./meshes/label01_18.png" width="80" />
+<img src="./meshes/label01_19.png" width="80" />
+<img src="./meshes/label01_20.png" width="80" />
+<img src="./meshes/label01_21.png" width="80" />
+
+<img src="./meshes/label02_01.png" width="80" />
+<img src="./meshes/label02_02.png" width="80" />
+<img src="./meshes/label02_03.png" width="80" />
+<img src="./meshes/label02_04.png" width="80" />
+<img src="./meshes/label02_05.png" width="80" />
+<img src="./meshes/label02_06.png" width="80" />
+<img src="./meshes/label02_07.png" width="80" />
+<img src="./meshes/label02_08.png" width="80" />
+<img src="./meshes/label02_09.png" width="80" />
+<img src="./meshes/label02_10.png" width="80" />
+<img src="./meshes/label02_11.png" width="80" />
+<img src="./meshes/label02_12.png" width="80" />
+<img src="./meshes/label02_13.png" width="80" />
+<img src="./meshes/label02_14.png" width="80" />
+<img src="./meshes/label02_15.png" width="80" />
+<img src="./meshes/label02_16.png" width="80" />
+<img src="./meshes/label02_17.png" width="80" />
+<img src="./meshes/label02_18.png" width="80" />
+<img src="./meshes/label02_19.png" width="80" />
+<img src="./meshes/label02_20.png" width="80" />
+<img src="./meshes/label02_21.png" width="80" />
+<img src="./meshes/label02_22.png" width="80" />
+<img src="./meshes/label02_23.png" width="80" />
+<img src="./meshes/label02_24.png" width="80" />
+<img src="./meshes/label02_25.png" width="80" />
 </p>
 
 ## Examples in Combinatorial 3D Shape Dataset
 
-![image info](./pictures/image.png)
 
 ## Citation
 ```
