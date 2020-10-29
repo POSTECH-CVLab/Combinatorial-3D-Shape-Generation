@@ -54,6 +54,16 @@
 
 ## Examples in Combinatorial 3D Shape Dataset
 
+* Bar
+<p align="center">
+<img src="./meshes/label11_16.png" width="140" />
+<img src="./meshes/label11_19.png" width="140" />
+<img src="./meshes/label11_22.png" width="140" />
+<img src="./meshes/label11_25.png" width="140" />
+<img src="./meshes/label11_28.png" width="140" />
+</p>
+
+* Line
 
 ## Citation
 ```
