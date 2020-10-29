@@ -2,7 +2,7 @@
 
 ## Connection Types Between Two 2-by-4 Bricks
 
-![Type 1](../meshes/label01_01.png =80px)
+![Type 1](./meshes/label01_01.png | width=80)
 
 ## Examples in Combinatorial 3D Shape Dataset
 
