@@ -1,7 +1,10 @@
 # Combinatorial-3D-Shape-Generation
 
-* [arXiv Preprint (abs)](https://arxiv.org/abs/2004.07414)
-* [arXiv Preprint (pdf)](https://arxiv.org/pdf/2004.07414.pdf)
+* arXiv Preprint: [(abs)](https://arxiv.org/abs/2004.07414), [(pdf)](https://arxiv.org/pdf/2004.07414.pdf)
+
+## Required Python Packages
+
+You are able to install required Python packages by commanding `pip install -r requirements.txt`.
 
 ## Connection Types Between Two 2-by-4 Bricks
 

@@ -1,4 +1,5 @@
 numpy
 open3d==0.9.0.0
-bayeso
 pybullet==2.8.2
+bayeso
+geometric_primitives
