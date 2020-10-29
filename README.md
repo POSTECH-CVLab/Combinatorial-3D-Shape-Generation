@@ -87,9 +87,9 @@
 
 * Cuboid
 <p align="center">
-<img src="./meshes/label14_20.png" width="180" />
-<img src="./meshes/label14_27.png" width="180" />
-<img src="./meshes/label14_30.png" width="180" />
+<img src="./meshes/label15_20.png" width="180" />
+<img src="./meshes/label15_27.png" width="180" />
+<img src="./meshes/label15_30.png" width="180" />
 </p>
 
 * Square Pyramid
@@ -97,6 +97,48 @@
 <img src="./meshes/label16_03.png" width="180" />
 <img src="./meshes/label16_04.png" width="180" />
 <img src="./meshes/label16_05.png" width="180" />
+</p>
+
+* Chair
+<p align="center">
+<img src="./meshes/label21_03.png" width="180" />
+<img src="./meshes/label21_07.png" width="180" />
+<img src="./meshes/label21_12.png" width="180" />
+</p>
+
+* Sofa
+<p align="center">
+<img src="./meshes/label22_09.png" width="180" />
+<img src="./meshes/label22_21.png" width="180" />
+<img src="./meshes/label22_28.png" width="180" />
+</p>
+
+* Cup
+<p align="center">
+<img src="./meshes/label23_05.png" width="180" />
+<img src="./meshes/label23_07.png" width="180" />
+<img src="./meshes/label23_18.png" width="180" />
+</p>
+
+* Hollow
+<p align="center">
+<img src="./meshes/label24_08.png" width="180" />
+<img src="./meshes/label24_10.png" width="180" />
+<img src="./meshes/label24_24.png" width="180" />
+</p>
+
+* Table
+<p align="center">
+<img src="./meshes/label25_07.png" width="180" />
+<img src="./meshes/label25_12.png" width="180" />
+<img src="./meshes/label25_15.png" width="180" />
+</p>
+
+* Car
+<p align="center">
+<img src="./meshes/label26_03.png" width="180" />
+<img src="./meshes/label26_12.png" width="180" />
+<img src="./meshes/label26_18.png" width="180" />
 </p>
 
 ## Citation
