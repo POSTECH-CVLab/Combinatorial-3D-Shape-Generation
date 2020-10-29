@@ -1,5 +1,8 @@
 # Combinatorial-3D-Shape-Generation
 
+* [arXiv Preprint (abs)](https://arxiv.org/abs/2004.07414)
+* [arXiv Preprint (pdf)](https://arxiv.org/pdf/2004.07414.pdf)
+
 ## Connection Types Between Two 2-by-4 Bricks
 
 <p align="center">
@@ -56,14 +59,45 @@
 
 * Bar
 <p align="center">
-<img src="./meshes/label11_16.png" width="140" />
-<img src="./meshes/label11_19.png" width="140" />
-<img src="./meshes/label11_22.png" width="140" />
-<img src="./meshes/label11_25.png" width="140" />
-<img src="./meshes/label11_28.png" width="140" />
+<img src="./meshes/label11_22.png" width="180" />
+<img src="./meshes/label11_25.png" width="180" />
+<img src="./meshes/label11_28.png" width="180" />
 </p>
 
 * Line
+<p align="center">
+<img src="./meshes/label12_19.png" width="180" />
+<img src="./meshes/label12_21.png" width="180" />
+<img src="./meshes/label12_23.png" width="180" />
+</p>
+
+* Plate
+<p align="center">
+<img src="./meshes/label13_20.png" width="180" />
+<img src="./meshes/label13_22.png" width="180" />
+<img src="./meshes/label13_24.png" width="180" />
+</p>
+
+* Wall
+<p align="center">
+<img src="./meshes/label14_13.png" width="180" />
+<img src="./meshes/label14_18.png" width="180" />
+<img src="./meshes/label14_23.png" width="180" />
+</p>
+
+* Cuboid
+<p align="center">
+<img src="./meshes/label14_20.png" width="180" />
+<img src="./meshes/label14_27.png" width="180" />
+<img src="./meshes/label14_30.png" width="180" />
+</p>
+
+* Square Pyramid
+<p align="center">
+<img src="./meshes/label16_03.png" width="180" />
+<img src="./meshes/label16_04.png" width="180" />
+<img src="./meshes/label16_05.png" width="180" />
+</p>
 
 ## Citation
 ```
