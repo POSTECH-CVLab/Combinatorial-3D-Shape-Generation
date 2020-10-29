@@ -2,9 +2,21 @@
 
 * arXiv Preprint: [(abs)](https://arxiv.org/abs/2004.07414), [(pdf)](https://arxiv.org/pdf/2004.07414.pdf)
 
-## Required Python Packages
+## Installing Required Python Packages
 
 You are able to install required Python packages by commanding `pip install -r requirements.txt`.
+
+## Running
+
+* Creating a dataset
+
+```shell
+# In src_dataset/
+$ ./dataset_all.sh 
+```
+
+* Generating a 3D shape
+* Creaing an XML file and its corresponding PLY files
 
 ## Connection Types Between Two 2-by-4 Bricks
 
