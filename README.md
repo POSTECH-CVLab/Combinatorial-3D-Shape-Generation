@@ -1,5 +1,13 @@
 # Combinatorial-3D-Shape-Generation
 
+## Connection Types Between Two 2-by-4 Bricks
+
+![Type 1](../meshes/label01_01.png =80px)
+
+## Examples in Combinatorial 3D Shape Dataset
+
+![image info](./pictures/image.png)
+
 ## Citation
 ```
 @article{KimJ2020arxiv,
