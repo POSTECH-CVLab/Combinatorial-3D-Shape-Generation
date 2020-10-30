@@ -3,6 +3,9 @@ import time
 import copy
 
 import bo
+import utils
+
+from geometric_primitives import utils as utils_gp
 
 
 def random_all(bricks_initial, num_bricks):
@@ -48,7 +51,7 @@ def random_eval_all(bricks_initial, num_bricks, num_acq, fun_evaluation):
 
     return bricks_
 
-def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, is_save=False, is_roll_back=False, is_multi=False):
+def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, use_rollback, use_multi):
     num_limit = 5
 
     list_len_bricks_all = []
@@ -59,11 +62,11 @@ def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun
         print('{}th bricks'.format(ind_brick + 2))
         time_start = time.time()
 
-        next_brick = bo.optimize(fun_evaluation, bricks_, num_bo_acq, num_bo_init, time_bo_acq, is_multi)[0]
+        next_brick = bo.optimize(fun_evaluation, bricks_, num_bo_acq, num_bo_init, time_bo_acq, use_multi)[0]
         bricks_.add(next_brick)
 
-        if is_roll_back:
-            bricks_rolled_back = roll_back(bricks_, fun_evaluation, is_multi)
+        if use_rollback:
+            bricks_rolled_back = utils.roll_back(bricks_, fun_evaluation, use_multi)
 
             if np.sum(bricks_rolled_back.get_length() == np.array(list_len_bricks_all)) <= num_limit:
                 if not bricks_.get_length() == bricks_rolled_back.get_length():
@@ -80,7 +83,6 @@ def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun
     if False:
         utils_gp.visualize(bricks_)
 
-    if is_save:
-        utils_gp.save_bricks(bricks_, str_path=str_path)
+    utils_gp.save_bricks(bricks_, str_path=str_path)
 
     return bricks_

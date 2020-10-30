@@ -23,13 +23,20 @@ It will create a dataset, which has already been included in the repository.
 
 ```shell
 # Move to src_generation/
-$ ./assemble_bo.py --ind_class 21 --ind_target 1 --use_stability --use_rollback
+$ python assemble_with_bo.py --ind_class 21 --ind_target 1 --use_stability --use_rollback
 ```
 
-`ind_class` and `ind_target` indicate the indices of class and target object, respectively. Please check the code for dataset creation.
+`ind_class` and `ind_target` indicate the indices of class and target object, respectively (Please check the code for dataset creation).
 `use_stability` and `use_rollback` are flags for considering stability and using a rollback step.
 
 * Creaing an XML file and its corresponding PLY files
+
+Run the following script.
+
+```shell
+# Move to src_rendering/
+$ ./meshes_all.sh 
+```
 
 ## Connection Types Between Two 2-by-4 Bricks
 

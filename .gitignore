@@ -133,4 +133,5 @@ dmypy.json
 __MACOSX/
 *.swp
 results/
+bricks/
 *_all.ply
