@@ -7,7 +7,6 @@ import argparse
 from geometric_primitives import bricks
 from geometric_primitives import utils as utils_gp
 
-import bo
 import wrappers
 import utils
 import constants
@@ -106,7 +105,7 @@ if __name__ == '__main__':
     bricks_initial = bricks.Bricks(2000)
     bricks_initial.add(target.get_bricks()[0])
 
-    bricks_bo = wrappers.bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, use_rollback, use_stability)
+    bricks_bo = wrappers.bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, use_rollback, use_stability, str_path=str_path)
 
     time_end_all = time.time()
     print('Overall time: {:.4f} sec.'.format(time_end_all - time_start_all))

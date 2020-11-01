@@ -51,7 +51,7 @@ def random_eval_all(bricks_initial, num_bricks, num_acq, fun_evaluation):
 
     return bricks_
 
-def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, str_path, use_rollback, use_multi):
+def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun_evaluation, use_rollback, use_multi, str_path=None):
     num_limit = 5
 
     list_len_bricks_all = []
@@ -80,6 +80,7 @@ def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun
         time_end = time.time()
         print('Time consumed: {:.4f} sec.'.format(time_end - time_start))
 
-    utils_gp.save_bricks(bricks_, str_path=str_path)
+    if str_path is not None:
+        utils_gp.save_bricks(bricks_, str_path=str_path)
 
     return bricks_

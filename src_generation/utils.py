@@ -16,7 +16,7 @@ def get_initial_bricks(num_bricks):
 
     return bricks_
 
-def roll_back(bricks_, fun_evaluation, is_multi, num_steps=1, threshold=2.5):
+def roll_back(bricks_, fun_evaluation, use_multi, num_steps=1, threshold=2.5):
     list_bricks = bricks_.get_bricks()
     len_bricks = bricks_.get_length()
     if len_bricks - num_steps - 1 < 1:
@@ -31,7 +31,7 @@ def roll_back(bricks_, fun_evaluation, is_multi, num_steps=1, threshold=2.5):
         cur_bricks.bricks = list_bricks[:ind+1]
 #        cur_bricks.validate_all()
 
-        if is_multi:
+        if use_multi:
             cur_score, _ = fun_evaluation(cur_bricks)
         else:
             cur_score = fun_evaluation(cur_bricks)
@@ -55,7 +55,7 @@ def roll_back(bricks_, fun_evaluation, is_multi, num_steps=1, threshold=2.5):
 
     return cur_bricks
 
-def save_results(str_path, str_file, fun_evaluation, bricks_, str_exp, is_multi):
+def save_results(str_path, str_file, fun_evaluation, bricks_, str_exp, use_multi):
     if not os.path.exists(str_path):
         os.makedirs(str_path)
     str_path_ = os.path.join(str_path, str_file)
@@ -72,7 +72,7 @@ def save_results(str_path, str_file, fun_evaluation, bricks_, str_exp, is_multi)
     for cur_brick in list_bricks_:
         bricks_tested.add(cur_brick)
 
-        if is_multi:
+        if use_multi:
             score, _ = fun_evaluation(bricks_tested)
         else:
             score = fun_evaluation(bricks_tested)
