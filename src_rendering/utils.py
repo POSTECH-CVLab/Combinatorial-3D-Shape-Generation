@@ -62,16 +62,14 @@ def get_voxel(color):
     return mesh_cube
 
 def get_mesh_bricks(bricks_):
-    np.random.seed(43)
-
     path_lego_2_4 = os.path.join(constants.PATH_UNIT_MESHES, constants.STR_LEGO_2_4)
 
     len_bricks = bricks_.get_length()
     mesh_bricks = []
     mesh_cubes = []
 
-    for _ in range(0, len_bricks):
-        color = np.random.rand(3)
+    for ind_bricks in range(1, len_bricks + 1):
+        color = np.random.RandomState(43 * ind_bricks).rand(3)
 
         mesh_brick = o3d.io.read_triangle_mesh(path_lego_2_4)
         mesh_brick = preprocess(mesh_brick, color)
@@ -108,13 +106,11 @@ def get_mesh_bricks(bricks_):
     return mesh_bricks, mesh_cubes
 
 def get_mesh_voxels(voxels_):
-    np.random.seed(43)
-
     len_voxels = voxels_.get_length()
     mesh_voxels = []
 
-    for _ in range(0, len_voxels):
-        color = np.random.rand(3)
+    for ind_bricks in range(1, len_voxels + 1):
+        color = np.random.RandomState(42 * ind_bricks).rand(3)
 
         mesh_voxel = get_voxel(color)
         mesh_voxels.append(mesh_voxel)

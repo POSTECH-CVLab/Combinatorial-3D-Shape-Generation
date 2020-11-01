@@ -38,6 +38,9 @@ Run the following script.
 $ ./meshes_all.sh 
 ```
 
+It requires a rendering process with [Mitsuba renderer](http://mitsuba-renderer.org/index_old.html).
+After changing the camera position and its perspective, render the XML file you want.
+
 ## Connection Types Between Two 2-by-4 Bricks
 
 <p align="center">

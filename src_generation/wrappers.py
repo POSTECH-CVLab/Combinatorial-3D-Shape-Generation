@@ -80,9 +80,6 @@ def bo_all(bricks_initial, num_bricks, num_bo_acq, num_bo_init, time_bo_acq, fun
         time_end = time.time()
         print('Time consumed: {:.4f} sec.'.format(time_end - time_start))
 
-    if False:
-        utils_gp.visualize(bricks_)
-
     utils_gp.save_bricks(bricks_, str_path=str_path)
 
     return bricks_
