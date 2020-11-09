@@ -11,13 +11,15 @@ import constants
 
 def save_meshes(str_source, str_meshes, str_files):
     for str_file in str_files:
-        print('Creating {}'.format(str_file[:-4]))
         str_brick = os.path.join(str_source, str_file)
         str_meshes_ = os.path.join(str_meshes, str_file[:-4])
 
         if not os.path.exists(str_meshes_):
             os.mkdir(str_meshes_)
+        else:
+            continue
 
+        print('Creating {}'.format(str_file[:-4]))
         str_save = os.path.join(str_meshes_, str_file)
         str_save = str_save[:-4] + '_{}.ply'
 
@@ -87,7 +89,7 @@ if __name__ == '__main__':
     if not os.path.exists(str_meshes_):
         os.mkdir(str_meshes_)
 
-    str_save = os.path.join(str_meshes_, 'single_brick_1.ply')
-    o3d.io.write_triangle_mesh(str_save, mesh_brick, write_ascii=True)
+        str_save = os.path.join(str_meshes_, 'single_brick_1.ply')
+        o3d.io.write_triangle_mesh(str_save, mesh_brick, write_ascii=True)
 
     save_meshes(constants.PATH_DATASET, constants.PATH_MESHES, str_files_dataset)
