@@ -88,7 +88,6 @@ if __name__ == '__main__':
         range_shade = 1.96
 
         ax.set_xlabel(r'\textrm{\#Primitives}', fontsize=size_font)
-        ax.set_ylabel(r'\textrm{Height}', fontsize=size_font)
         ax.tick_params(labelsize=20)
 
         for ind_scores, cur_scores in enumerate(scores):
@@ -117,12 +116,16 @@ if __name__ == '__main__':
 
         if str_exp == 'maximize_height':
             ax.set_ylim([0, np.max(x_data)])
+            ax.set_ylabel(r'\textrm{Height}', fontsize=size_font)
         elif str_exp == 'maximize_width':
             ax.set_ylim([0, 100])
+            ax.set_ylabel(r'\textrm{Width}', fontsize=size_font)
         elif str_exp == 'maximize_depth':
             ax.set_ylim([0, 100])
+            ax.set_ylabel(r'\textrm{Depth}', fontsize=size_font)
         elif str_exp == 'maximize_contacts':
             ax.set_ylim([0, 250])
+            ax.set_ylabel(r'\textrm{\#Connected studs}', fontsize=size_font)
 
         plt.grid(True)
         plt.legend(loc='upper left', fancybox=False, edgecolor='black', fontsize=22)
