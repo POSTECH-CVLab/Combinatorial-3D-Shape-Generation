@@ -1,6 +1,7 @@
 # Combinatorial-3D-Shape-Generation
 
 * arXiv Preprint: [(abs)](https://arxiv.org/abs/2004.07414), [(pdf)](https://arxiv.org/pdf/2004.07414.pdf)
+* [High-Resolution Version](http://jungtaek.github.io/papers/final_ml4eng_2020_high_resolution.pdf)
 
 ## Installing Required Python Packages
 
@@ -185,6 +186,17 @@ After changing the camera position and its perspective, render the XML file you 
     author={Kim, Jungtaek and Chung, Hyunsoo and Lee, Jinhwi and Cho, Minsu and Park, Jaesik},
     title={Combinatorial {3D} Shape Generation via Sequential Assembly},
     journal={{arXiv} preprint {arXiv}:2004.07414},
+    year={2020}
+}
+```
+
+or
+
+```
+@inproceedings{KimJ2020neuripsw,
+    author={Kim, Jungtaek and Chung, Hyunsoo and Lee, Jinhwi and Cho, Minsu and Park, Jaesik},
+    title={Combinatorial {3D} Shape Generation via Sequential Assembly},
+    booktitle={NeurIPS Workshop on Machine Learning for Engineering Modeling, Simulation, and Design (ML4Eng)},
     year={2020}
 }
 ```
