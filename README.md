@@ -201,8 +201,9 @@ or
 }
 ```
 
-## Contact
+## Contributor
 * Jungtaek Kim: [jtkim@postech.ac.kr](mailto:jtkim@postech.ac.kr)
+* Hyunsoo Chung: [hschung2@postech.ac.kr](mailto:hschung2@postech.ac.kr)
 
 ## License
 [MIT License](LICENSE)
