@@ -5,7 +5,7 @@ import dataset_common
 
 
 def bar(height, direction):
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_brick_ = []
     
@@ -56,4 +56,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_BAR)
-

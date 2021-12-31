@@ -8,7 +8,7 @@ import dataset_common
 
 def cuboid(w, h, d):
     assert d > 1
-    bricks_ = bricks.Bricks(1000)
+    bricks_ = bricks.Bricks(1000, '0')
 
     list_brick_ = []
 
@@ -135,4 +135,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_CUBOID)
-

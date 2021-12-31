@@ -5,7 +5,7 @@ import dataset_common
 
 
 def cup_1():
-    bricks_ = bricks.Bricks(40)
+    bricks_ = bricks.Bricks(40, '0')
     
     list_brick_ = []
     
@@ -97,7 +97,7 @@ def cup_1():
     return bricks_
 
 def cup_2():
-    bricks_ = bricks.Bricks(40)
+    bricks_ = bricks.Bricks(40, '0')
     
     list_brick_ = []
     
@@ -220,7 +220,7 @@ def cup_2():
     return bricks_
 
 def cup_3():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -309,7 +309,7 @@ def cup_3():
     return bricks_
 
 def cup_4():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -406,7 +406,7 @@ def cup_4():
     return bricks_
 
 def cup_5():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -552,7 +552,7 @@ def cup_5():
     return bricks_
 
 def cup_6():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -620,7 +620,7 @@ def cup_6():
     return bricks_
 
 def cup_7():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -847,7 +847,7 @@ def cup_7():
     return bricks_
 
 def cup_8():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -948,7 +948,7 @@ def cup_8():
     return bricks_
 
 def cup_9():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1052,7 +1052,7 @@ def cup_9():
     return bricks_
 
 def cup_10():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1206,7 +1206,7 @@ def cup_10():
     return bricks_
 
 def cup_11():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1260,7 +1260,7 @@ def cup_11():
     return bricks_
 
 def cup_12():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1324,7 +1324,7 @@ def cup_12():
     return bricks_
 
 def cup_13():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1424,7 +1424,7 @@ def cup_13():
     return bricks_
 
 def cup_14():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1478,7 +1478,7 @@ def cup_14():
     return bricks_
 
 def cup_15():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -1594,7 +1594,7 @@ def cup_15():
     return bricks_
 
 def cup_16():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -1655,7 +1655,7 @@ def cup_16():
     return bricks_
 
 def cup_17():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -1710,7 +1710,7 @@ def cup_17():
     return bricks_
 
 def cup_18():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -1805,7 +1805,7 @@ def cup_18():
     return bricks_
 
 def cup_19():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -1870,7 +1870,7 @@ def cup_19():
     return bricks_
 
 def cup_20():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -1921,7 +1921,7 @@ def cup_20():
     return bricks_
 
 def cup_21():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -2006,7 +2006,7 @@ def cup_21():
     return bricks_
 
 def cup_22():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -2106,7 +2106,7 @@ def cup_22():
     return bricks_
 
 def cup_23():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -2160,7 +2160,7 @@ def cup_23():
     return bricks_
 
 def cup_24():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -2239,7 +2239,7 @@ def cup_24():
     return bricks_
 
 def cup_25():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -2288,7 +2288,7 @@ def cup_25():
     return bricks_
 
 def cup_26():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -2356,7 +2356,7 @@ def cup_26():
     return bricks_
 
 def cup_27():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -2402,7 +2402,7 @@ def cup_27():
     return bricks_
 
 def cup_28():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -2470,7 +2470,7 @@ def cup_28():
     return bricks_
 
 def cup_29():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
     
     list_brick_ = []
     
@@ -2539,7 +2539,7 @@ def cup_29():
     return bricks_
 
 def cup_30():
-    bricks_ = bricks.Bricks(100)
+    bricks_ = bricks.Bricks(100, '0')
     
     list_brick_ = []
     
@@ -2649,4 +2649,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_CUP)
-

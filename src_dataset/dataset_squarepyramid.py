@@ -10,7 +10,7 @@ def plate(length):
     w = length
     h = length
 
-    bricks_ = bricks.Bricks(1000)
+    bricks_ = bricks.Bricks(1000, '0')
 
     list_brick_ = []
 
@@ -91,7 +91,7 @@ def plate(length):
 def squarepyramid(length, trans_offset):
     assert length > 1
 
-    bricks_ = bricks.Bricks(1000)
+    bricks_ = bricks.Bricks(1000, '0')
 
     list_brick_ = plate(length)
     
@@ -178,4 +178,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_SQUAREPYRAMID)
-

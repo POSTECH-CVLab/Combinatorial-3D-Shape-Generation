@@ -7,7 +7,7 @@ import dataset_common
 
 
 def line_two_layers(length, direction):
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_bricks = []
     
@@ -61,4 +61,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_LINE)
-

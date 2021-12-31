@@ -15,13 +15,13 @@ def random(num_bricks_min=5, num_bricks_max=100):
     brick_.set_position([0, 0, 0])
     brick_.set_direction(0)
 
-    bricks_ = bricks.Bricks(num_bricks)
+    bricks_ = bricks.Bricks(num_bricks, '0')
     bricks_.add(brick_)
 
     for ind in range(0, num_bricks - 1):
         next_brick = None
         while next_brick is None:
-            next_brick = bricks_.sample_one()
+            next_brick = bricks_.sample()[0]
 
         bricks_.add(next_brick)
 
@@ -39,4 +39,3 @@ if __name__ == '__main__':
         list_bricks_.append(random())
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_RANDOM)
-

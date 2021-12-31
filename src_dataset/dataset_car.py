@@ -5,7 +5,7 @@ import dataset_common
 
 
 def car_demo():
-    bricks_ = bricks.Bricks(150)
+    bricks_ = bricks.Bricks(150, '0')
 
     list_brick_ = []
 
@@ -183,7 +183,7 @@ def car_demo():
     return bricks_
 
 def car_ambulance():
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_brick_ = []
 
@@ -361,7 +361,7 @@ def car_ambulance():
     return bricks_
 
 def car_sports():
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_brick_ = []
     
@@ -593,7 +593,7 @@ def car_sports():
     return bricks_
 
 def car_default_1():
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_brick_ = []
     
@@ -728,7 +728,7 @@ def car_default_1():
     return bricks_
 
 def car_default_2():
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_brick_ = []
     
@@ -950,7 +950,7 @@ def car_default_2():
 
 def car_mini():
     
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1137,7 +1137,7 @@ def car_mini():
     return bricks_
 
 def car_10():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1251,7 +1251,7 @@ def car_10():
     return bricks_
 
 def car_11():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1353,7 +1353,7 @@ def car_11():
     return bricks_
 
 def car_12():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1460,7 +1460,7 @@ def car_12():
     return bricks_
 
 def car_13():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1564,7 +1564,7 @@ def car_13():
     return bricks_
 
 def car_14():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1665,7 +1665,7 @@ def car_14():
     return bricks_
 
 def car_15():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1784,7 +1784,7 @@ def car_15():
     return bricks_
 
 def car_16():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1877,7 +1877,7 @@ def car_16():
     return bricks_
 
 def car_17():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -1964,7 +1964,7 @@ def car_17():
     return bricks_
 
 def car_18():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -2104,7 +2104,7 @@ def car_18():
     return bricks_
 
 def car_19():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -2232,7 +2232,7 @@ def car_19():
     return bricks_
 
 def car_20():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -2346,7 +2346,7 @@ def car_20():
     return bricks_
 
 def car_orig_1():
-    bricks_ = bricks.Bricks(20)
+    bricks_ = bricks.Bricks(20, '0')
 
     list_brick_ = []
 
@@ -2436,7 +2436,7 @@ def car_orig_1():
     return bricks_
 
 def car_orig_2():
-    bricks_ = bricks.Bricks(40)
+    bricks_ = bricks.Bricks(40, '0')
 
     list_brick_ = []
 
@@ -2563,7 +2563,7 @@ def car_orig_2():
     return bricks_
 
 def car_orig_3():
-    bricks_ = bricks.Bricks(40)
+    bricks_ = bricks.Bricks(40, '0')
 
     list_brick_ = []
 
@@ -2729,7 +2729,7 @@ def car_orig_3():
     return bricks_
 
 def car_21():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -2871,7 +2871,7 @@ def car_21():
     return bricks_
 
 def car_22():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -2997,7 +2997,7 @@ def car_22():
     return bricks_
 
 def car_23():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -3141,7 +3141,7 @@ def car_23():
     return bricks_
 
 def car_24():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -3226,7 +3226,7 @@ def car_24():
     return bricks_
 
 def car_25():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -3344,7 +3344,7 @@ def car_25():
     return bricks_
 
 def car_26():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -3465,7 +3465,7 @@ def car_26():
     return bricks_
 
 def car_27():
-    bricks_ = bricks.Bricks(200)
+    bricks_ = bricks.Bricks(200, '0')
 
     list_brick_ = []
     
@@ -3592,7 +3592,7 @@ def car_27():
     return bricks_
 
 def car_28():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -3715,7 +3715,7 @@ def car_28():
     return bricks_
     
 def car_29():
-    bricks_ = bricks.Bricks(40)
+    bricks_ = bricks.Bricks(40, '0')
 
     list_brick_ = []
 
@@ -3825,7 +3825,7 @@ def car_29():
     return bricks_
 
 def car_30():
-    bricks_ = bricks.Bricks(300)
+    bricks_ = bricks.Bricks(300, '0')
 
     list_brick_ = []
     
@@ -4005,4 +4005,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_CAR)
-

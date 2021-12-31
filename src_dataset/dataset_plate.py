@@ -5,7 +5,7 @@ import dataset_common
 
 
 def two_layer_plate(w, h):
-    bricks_ = bricks.Bricks(500)
+    bricks_ = bricks.Bricks(500, '0')
 
     list_brick_ = []
 
@@ -122,4 +122,3 @@ if __name__ == '__main__':
     ]
 
     dataset_common.create_bricks(list_bricks_, dataset_common.STR_LABEL_PLATE)
-
