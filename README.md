@@ -32,7 +32,7 @@ $ python assemble_with_bo.py --ind_class 21 --ind_target 1 --use_stability --use
 `ind_class` and `ind_target` indicate the indices of class and target object, respectively (Please check the code for dataset creation).
 `use_stability` and `use_rollback` are flags for considering stability and using a rollback step.
 
-* Creaing an XML file and its corresponding PLY files
+* Creating an XML file and its corresponding PLY files
 
 Run the following script.
 
