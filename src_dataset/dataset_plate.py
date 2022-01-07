@@ -5,7 +5,7 @@ import dataset_common
 
 
 def two_layer_plate(w, h):
-    bricks_ = bricks.Bricks(500, '0')
+    bricks_ = bricks.Bricks(500)
 
     list_brick_ = []
 

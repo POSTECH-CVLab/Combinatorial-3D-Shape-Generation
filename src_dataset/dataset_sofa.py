@@ -5,7 +5,7 @@ import dataset_common
 
 
 def sofa_1():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
 
     list_brick_ = []
 
@@ -152,7 +152,7 @@ def sofa_1():
     return bricks_
 
 def sofa_2():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
 
     list_brick_ = []
 
@@ -223,7 +223,7 @@ def sofa_2():
     return bricks_
 
 def sofa_heart():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
 
     list_brick_ = []
 
@@ -335,7 +335,7 @@ def sofa_heart():
     return bricks_
 
 def sofa_3():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
 
     list_brick_ = []
     
@@ -435,7 +435,7 @@ def sofa_3():
     return bricks_
 
 def sofa_4():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
 
     list_brick_ = []
     
@@ -512,7 +512,7 @@ def sofa_4():
 
 
 def sofa_5():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
 
     list_brick_ = []
     
@@ -609,7 +609,7 @@ def sofa_5():
     return bricks_
 
 def sofa_6():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -724,7 +724,7 @@ def sofa_6():
     return bricks_
 
 def sofa_7():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -810,7 +810,7 @@ def sofa_7():
 
 def sofa_8():
     
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -884,7 +884,7 @@ def sofa_8():
     return bricks_
 
 def sofa_9():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -951,7 +951,7 @@ def sofa_9():
     return bricks_
 
 def sofa_10():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1055,7 +1055,7 @@ def sofa_10():
     return bricks_
 
 def sofa_11():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1134,7 +1134,7 @@ def sofa_11():
     return bricks_
 
 def sofa_12():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1223,7 +1223,7 @@ def sofa_12():
     return bricks_
 
 def sofa_13():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1284,7 +1284,7 @@ def sofa_13():
     return bricks_
 
 def sofa_14():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1358,7 +1358,7 @@ def sofa_14():
     return bricks_
 
 def sofa_15():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1431,7 +1431,7 @@ def sofa_15():
     return bricks_
 
 def sofa_16():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1530,7 +1530,7 @@ def sofa_16():
     return bricks_
 
 def sofa_17():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1626,7 +1626,7 @@ def sofa_17():
     return bricks_
 
 def sofa_18():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1704,7 +1704,7 @@ def sofa_18():
     return bricks_
 
 def sofa_19():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1764,7 +1764,7 @@ def sofa_19():
     return bricks_
 
 def sofa_20():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1854,7 +1854,7 @@ def sofa_20():
     return bricks_
 
 def sofa_21():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1958,7 +1958,7 @@ def sofa_21():
     return bricks_
 
 def sofa_22():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2026,7 +2026,7 @@ def sofa_22():
     return bricks_
 
 def sofa_23():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2120,7 +2120,7 @@ def sofa_23():
     return bricks_
 
 def sofa_24():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2201,7 +2201,7 @@ def sofa_24():
     return bricks_
 
 def sofa_25():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2308,7 +2308,7 @@ def sofa_25():
     return bricks_
 
 def sofa_26():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2392,7 +2392,7 @@ def sofa_26():
     return bricks_
 
 def sofa_27():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2477,7 +2477,7 @@ def sofa_27():
     return bricks_
 
 def sofa_28():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2549,7 +2549,7 @@ def sofa_28():
     return bricks_
     
 def sofa_29():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     

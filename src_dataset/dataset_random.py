@@ -15,7 +15,7 @@ def random(num_bricks_min=5, num_bricks_max=100):
     brick_.set_position([0, 0, 0])
     brick_.set_direction(0)
 
-    bricks_ = bricks.Bricks(num_bricks, '0')
+    bricks_ = bricks.Bricks(num_bricks)
     bricks_.add(brick_)
 
     for ind in range(0, num_bricks - 1):
