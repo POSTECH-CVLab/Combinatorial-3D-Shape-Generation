@@ -5,7 +5,7 @@ This is an official repository of paper "Combinatorial 3D Shape Generation via S
 * arXiv Preprint: [(abs)](https://arxiv.org/abs/2004.07414), [(pdf)](https://arxiv.org/pdf/2004.07414.pdf)
 * [High-Resolution Version](http://jungtaek.github.io/papers/final_ml4eng_2020_high_resolution.pdf) (About 50MB)
 
-## Installing Required Python Packages
+## Installing Required Python Packages (Python 3.7)
 
 You are able to install required Python packages by commanding `pip install -r requirements.txt`.
 
