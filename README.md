@@ -5,7 +5,7 @@ This is an official repository of paper "Combinatorial 3D Shape Generation via S
 * arXiv Preprint: [(abs)](https://arxiv.org/abs/2004.07414), [(pdf)](https://arxiv.org/pdf/2004.07414.pdf)
 * [High-Resolution Version](http://jungtaek.github.io/papers/final_ml4eng_2020_high_resolution.pdf) (About 50MB)
 
-## Installing Required Python Packages
+## Installing Required Python Packages (Python 3.7)
 
 You are able to install required Python packages by commanding `pip install -r requirements.txt`.
 
@@ -32,7 +32,7 @@ $ python assemble_with_bo.py --ind_class 21 --ind_target 1 --use_stability --use
 `ind_class` and `ind_target` indicate the indices of class and target object, respectively (Please check the code for dataset creation).
 `use_stability` and `use_rollback` are flags for considering stability and using a rollback step.
 
-* Creaing an XML file and its corresponding PLY files
+* Creating an XML file and its corresponding PLY files
 
 Run the following script.
 

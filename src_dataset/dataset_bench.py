@@ -5,7 +5,7 @@ import dataset_common
 
 
 def bench_1():
-    bricks_ = bricks.Bricks(40, '0')
+    bricks_ = bricks.Bricks(40)
     
     list_brick_ = []
     
@@ -91,7 +91,7 @@ def bench_1():
     return bricks_
 
 def bench_2():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -216,7 +216,7 @@ def bench_2():
     return bricks_
 
 def bench_3():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -339,7 +339,7 @@ def bench_3():
     return bricks_
 
 def bench_4():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -427,7 +427,7 @@ def bench_4():
     return bricks_
 
 def bench_5():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -502,7 +502,7 @@ def bench_5():
     return bricks_
 
 def bench_6():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -580,7 +580,7 @@ def bench_6():
     return bricks_
 
 def bench_7():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -658,7 +658,7 @@ def bench_7():
     return bricks_
 
 def bench_8():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -767,7 +767,7 @@ def bench_8():
     return bricks_
 
 def bench_9():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -856,7 +856,7 @@ def bench_9():
     return bricks_
 
 def bench_10():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -940,7 +940,7 @@ def bench_10():
     return bricks_
 
 def bench_11():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -998,7 +998,7 @@ def bench_11():
     return bricks_
 
 def bench_12():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1064,7 +1064,7 @@ def bench_12():
     return bricks_
 
 def bench_13():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1149,7 +1149,7 @@ def bench_13():
     return bricks_
 
 def bench_14():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1211,7 +1211,7 @@ def bench_14():
     return bricks_
 
 def bench_15():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1280,7 +1280,7 @@ def bench_15():
     return bricks_
 
 def bench_16():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1348,7 +1348,7 @@ def bench_16():
     return bricks_
 
 def bench_17():
-    bricks_ = bricks.Bricks(80, '0')
+    bricks_ = bricks.Bricks(80)
     
     list_brick_ = []
     
@@ -1421,7 +1421,7 @@ def bench_17():
     return bricks_
 
 def bench_18():
-    bricks_ = bricks.Bricks(80, '0')
+    bricks_ = bricks.Bricks(80)
     
     list_brick_ = []
     
@@ -1462,7 +1462,7 @@ def bench_18():
     return bricks_
 
 def bench_19():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1568,7 +1568,7 @@ def bench_19():
     return bricks_
 
 def bench_20():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1641,7 +1641,7 @@ def bench_20():
     return bricks_
 
 def bench_21():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1730,7 +1730,7 @@ def bench_21():
     return bricks_
 
 def bench_22():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1828,7 +1828,7 @@ def bench_22():
     return bricks_
     
 def bench_23():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1905,7 +1905,7 @@ def bench_23():
     return bricks_
 
 def bench_24():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1991,7 +1991,7 @@ def bench_24():
     return bricks_
 
 def bench_25():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2077,7 +2077,7 @@ def bench_25():
     return bricks_
 
 def bench_26():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2145,7 +2145,7 @@ def bench_26():
     return bricks_
 
 def bench_27():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2213,7 +2213,7 @@ def bench_27():
     return bricks_
 
 def bench_28():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -2294,7 +2294,7 @@ def bench_28():
     return bricks_
 
 def bench_29():
-    bricks_ = bricks.Bricks(80, '0')
+    bricks_ = bricks.Bricks(80)
     
     list_brick_ = []
     
@@ -2381,7 +2381,7 @@ def bench_29():
     return bricks_
 
 def bench_30():
-    bricks_ = bricks.Bricks(80, '0')
+    bricks_ = bricks.Bricks(80)
     
     list_brick_ = []
     

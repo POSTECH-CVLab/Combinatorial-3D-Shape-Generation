@@ -7,7 +7,7 @@ import dataset_common
 
 
 def line_two_layers(length, direction):
-    bricks_ = bricks.Bricks(200, '0')
+    bricks_ = bricks.Bricks(200)
 
     list_bricks = []
     

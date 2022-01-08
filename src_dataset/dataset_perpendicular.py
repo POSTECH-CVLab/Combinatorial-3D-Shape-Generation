@@ -12,7 +12,7 @@ if __name__ == '__main__':
     list_bricks_ = []
 
     for rule in list_rules:
-        bricks_ = bricks.Bricks(100, '0')
+        bricks_ = bricks.Bricks(100)
         brick_ = brick.Brick()
         brick_.set_position([0, 0, 0])
         brick_.set_direction(0)

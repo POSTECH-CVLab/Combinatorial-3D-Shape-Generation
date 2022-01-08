@@ -5,7 +5,7 @@ import dataset_common
 
 
 def bar(height, direction):
-    bricks_ = bricks.Bricks(200, '0')
+    bricks_ = bricks.Bricks(200)
 
     list_brick_ = []
     

@@ -5,7 +5,7 @@ import dataset_common
 
 
 def square_hollow(w, h):
-    bricks_ = bricks.Bricks(200, '0')
+    bricks_ = bricks.Bricks(200)
 
     list_brick_ = []
 
@@ -56,7 +56,7 @@ def square_hollow(w, h):
     return bricks_
 
 def hollow_1():
-    bricks_ = bricks.Bricks(40, '0')
+    bricks_ = bricks.Bricks(40)
     
     list_brick_ = []
     
@@ -150,7 +150,7 @@ def hollow_1():
     return bricks_
 
 def hollow_2():
-    bricks_ = bricks.Bricks(40, '0')
+    bricks_ = bricks.Bricks(40)
     
     list_brick_ = []
     
@@ -275,7 +275,7 @@ def hollow_2():
     return bricks_
 
 def hollow_3():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -375,7 +375,7 @@ def hollow_3():
     return bricks_
 
 def hollow_4():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -528,7 +528,7 @@ def hollow_4():
     return bricks_
 
 def hollow_5():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -637,7 +637,7 @@ def hollow_5():
     return bricks_
 
 def hollow_6():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -692,7 +692,7 @@ def hollow_6():
     return bricks_
 
 def hollow_7():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -778,7 +778,7 @@ def hollow_7():
     return bricks_
 
 def hollow_8():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -913,7 +913,7 @@ def hollow_8():
     return bricks_
 
 def hollow_9():
-    bricks_ = bricks.Bricks(200, '0')
+    bricks_ = bricks.Bricks(200)
     
     list_brick_ = []
     
@@ -1081,7 +1081,7 @@ def hollow_9():
     return bricks_
 
 def hollow_10():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1165,7 +1165,7 @@ def hollow_10():
     return bricks_
 
 def hollow_11():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1219,7 +1219,7 @@ def hollow_11():
 
 def hollow_12():
     
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1273,7 +1273,7 @@ def hollow_12():
     return bricks_
 
 def hollow_13():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1294,7 +1294,7 @@ def hollow_13():
     return bricks_
 
 def hollow_13():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1356,7 +1356,7 @@ def hollow_13():
     return bricks_
 
 def hollow_14():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1385,7 +1385,7 @@ def hollow_14():
     return bricks_
 
 def hollow_15():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1429,7 +1429,7 @@ def hollow_15():
     return bricks_
 
 def hollow_16():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1474,7 +1474,7 @@ def hollow_16():
     return bricks_
 
 def hollow_17():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1547,7 +1547,7 @@ def hollow_17():
     return bricks_
 
 def hollow_18():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1592,7 +1592,7 @@ def hollow_18():
     return bricks_
 
 def hollow_19():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1621,7 +1621,7 @@ def hollow_19():
     return bricks_
 
 def hollow_20():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
@@ -1727,7 +1727,7 @@ def hollow_20():
     return bricks_
 
 def hollow_21():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1779,7 +1779,7 @@ def hollow_21():
     return bricks_
 
 def hollow_22():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1876,7 +1876,7 @@ def hollow_22():
     return bricks_
 
 def hollow_23():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -1934,7 +1934,7 @@ def hollow_23():
     return bricks_
 
 def hollow_24():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2093,7 +2093,7 @@ def hollow_24():
     return bricks_
 
 def hollow_25():
-    bricks_ = bricks.Bricks(60, '0')
+    bricks_ = bricks.Bricks(60)
     
     list_brick_ = []
     
@@ -2218,7 +2218,7 @@ def hollow_25():
     return bricks_
 
 def hollow_26():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2280,7 +2280,7 @@ def hollow_26():
     return bricks_
 
 def hollow_27():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2339,7 +2339,7 @@ def hollow_27():
     return bricks_
 
 def hollow_28():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2399,7 +2399,7 @@ def hollow_28():
     return bricks_
 
 def hollow_29():
-    bricks_ = bricks.Bricks(150, '0')
+    bricks_ = bricks.Bricks(150)
     
     list_brick_ = []
     
@@ -2475,7 +2475,7 @@ def hollow_29():
     return bricks_
 
 def hollow_30():
-    bricks_ = bricks.Bricks(100, '0')
+    bricks_ = bricks.Bricks(100)
     
     list_brick_ = []
     
